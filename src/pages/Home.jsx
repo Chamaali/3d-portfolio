@@ -9,6 +9,7 @@ import Plane from "../models/Plane.jsx";
 
 const Home = () => {
     const [isRotating, setIsRotating] = useState(false)
+    const [islandRotationValue, setIslandRotationValue] = useState(0)
     const [isSpeedNull, setIsSpeedNull] = useState(true)
     const [currentStage, setCurrentStage] = useState(1)
 
@@ -43,6 +44,7 @@ const Home = () => {
     const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize()
     const [planeScale, planePosition] = adjustPlaneForScreenSize()
 
+   
     return (
         <section className='w-full h-screen relative'>
             {/*<div className='absolute top-28 left-0 right-0 z-10 flex-center'>*/}
@@ -61,7 +63,10 @@ const Home = () => {
                                          intensity={1}
                         />
                         <Bird/>
-                        <Sky/>
+                        <Sky
+                            isSpeedNull={isSpeedNull}
+                            islandRotationValue={islandRotationValue}
+                        />
                         <Island
                             position={islandPosition}
                             scale={islandScale}
@@ -70,6 +75,7 @@ const Home = () => {
                             setIsRotating={setIsRotating}
                             setCurrentStage = {setCurrentStage}
                             setIsSpeedNull={setIsSpeedNull}
+                            setIslandRotationValue={setIslandRotationValue}
                         />
                         <Plane
                             isRotating={isRotating}
