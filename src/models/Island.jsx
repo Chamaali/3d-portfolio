@@ -10,11 +10,20 @@ Title: Fox's islands
 import {useCallback, useEffect, useRef} from "react";
 import {useGLTF} from "@react-three/drei";
 
+
 import islandScene from '../assets/3d/island.glb'
 import {a} from '@react-spring/three'
 import {useFrame, useThree} from "@react-three/fiber";
 
-export const Island = ({isRotating, setIsRotating, setCurrentStage, setIsSpeedNull, setIslandRotationValue, ...props}) => {
+export const Island = ({
+                           isRotating,
+                           setIsRotating,
+                           setCurrentStage,
+                           setIsSpeedNull,
+                           setIslandRotationValue,
+                           islandRotationValue,
+                           setIslandSpeedValue,
+                           ...props}) => {
     const islandRef = useRef()
     const {gl, viewport} = useThree()
     const {nodes, materials} = useGLTF(islandScene);
@@ -53,35 +62,38 @@ export const Island = ({isRotating, setIsRotating, setCurrentStage, setIsSpeedNu
             islandRef.current.rotation.y += delta * 0.01 * Math.PI
             lastX.current = clientX
             rotationSpeed.current = delta * 0.01 * Math.PI
+            setIslandSpeedValue(rotationSpeed.current)
             setIsSpeedNull(false)
         }
-    }, [isRotating, lastX, viewport.width, rotationSpeed, islandRef, setIsSpeedNull]);
+    }, [isRotating, viewport.width, setIslandSpeedValue, setIsSpeedNull]);
 
     const handleKeyDown = useCallback((e) => {
-        if (e.key === 'ArrowLeft') {
-            if (!isRotating) {
-                setIsRotating(true)
-                setIsSpeedNull(false)
+        if(e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
+            const rotatingFactor = 0.01 * Math.PI
+            setIsRotating(true)
+            setIsSpeedNull(false)
+            if(e.key === 'ArrowLeft'){
+                islandRef.current.rotation.y += rotatingFactor
+                setIslandSpeedValue(rotatingFactor)
+            } else {
+                islandRef.current.rotation.y -= rotatingFactor
+                setIslandSpeedValue(-rotatingFactor)
             }
-            islandRef.current.rotation.y += 0.025 * Math.PI
-        } else if (e.key === 'ArrowRight') {
-            if (!isRotating) {
-                setIsRotating(true)
-                setIsSpeedNull(false)
-            }
-            islandRef.current.rotation.y -= 0.025 * Math.PI
+           
         }
-    }, [islandRef, isRotating, setIsRotating, setIsSpeedNull]);
+    }, [setIsRotating, setIsSpeedNull, setIslandSpeedValue]);
 
     const handleKeyUp = useCallback((e) => {
         if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
             setIsRotating(false)
+            setIslandSpeedValue(0)
         }
     }, [setIsRotating]);
 
     useFrame(() => {
         if (!isRotating) {
             rotationSpeed.current *= dampingFactor
+            setIslandSpeedValue(rotationSpeed.current)
 
             if (Math.abs(rotationSpeed.current) < 0.001) {
                 rotationSpeed.current = 0
@@ -91,10 +103,9 @@ export const Island = ({isRotating, setIsRotating, setCurrentStage, setIsSpeedNu
             islandRef.current.rotation.y += rotationSpeed.current
 
         } else {
-            const rotation = islandRef.current.rotation.y;
-            setIslandRotationValue(rotation)
+            setIslandRotationValue(islandRef.current.rotation.y)
             const normalizedRotation =
-                ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
+                ((islandRotationValue % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
 
             switch (true) {
                 case normalizedRotation >= 5.45 && normalizedRotation <= 5.85:

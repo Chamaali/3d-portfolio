@@ -5,11 +5,13 @@ import Island from "../models/Island.jsx";
 import Sky from "../models/Sky.jsx";
 import Bird from "../models/Bird.jsx";
 import Plane from "../models/Plane.jsx";
+import HomeInfo from "../components/HomeInfo.jsx";
 
 
 const Home = () => {
     const [isRotating, setIsRotating] = useState(false)
     const [islandRotationValue, setIslandRotationValue] = useState(0)
+    const [islandSpeedValue, setIslandSpeedValue] = useState(0)
     const [isSpeedNull, setIsSpeedNull] = useState(true)
     const [currentStage, setCurrentStage] = useState(1)
 
@@ -47,9 +49,9 @@ const Home = () => {
    
     return (
         <section className='w-full h-screen relative'>
-            {/*<div className='absolute top-28 left-0 right-0 z-10 flex-center'>*/}
-            {/*    POPUP*/}
-            {/*</div>*/}
+            <div className='absolute top-28 left-0 right-0 z-10 flex-center'>
+                {currentStage && <HomeInfo currentStage={currentStage}/>}
+            </div>
 
                 <Canvas
                     className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
@@ -66,6 +68,8 @@ const Home = () => {
                         <Sky
                             isSpeedNull={isSpeedNull}
                             islandRotationValue={islandRotationValue}
+                            islandSpeedValue={islandSpeedValue}
+                            isRotating={isRotating}
                         />
                         <Island
                             position={islandPosition}
@@ -76,6 +80,8 @@ const Home = () => {
                             setCurrentStage = {setCurrentStage}
                             setIsSpeedNull={setIsSpeedNull}
                             setIslandRotationValue={setIslandRotationValue}
+                            islandRotationValue={islandRotationValue}
+                            setIslandSpeedValue={setIslandSpeedValue}
                         />
                         <Plane
                             isRotating={isRotating}

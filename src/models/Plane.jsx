@@ -19,7 +19,7 @@ const Plane = ({isSpeedNull, ...props}) => {
         } else {
             timeoutRef.current = setTimeout(() => {
                 actions['Take 001'].stop();
-            }, 1000); // Delay of 1 second
+            }, 500); // Delay of 1 second
         }
     }, [actions, isSpeedNull]);
 
