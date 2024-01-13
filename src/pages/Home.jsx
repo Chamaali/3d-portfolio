@@ -66,10 +66,7 @@ const Home = () => {
                         />
                         <Bird/>
                         <Sky
-                            isSpeedNull={isSpeedNull}
-                            islandRotationValue={islandRotationValue}
                             islandSpeedValue={islandSpeedValue}
-                            isRotating={isRotating}
                         />
                         <Island
                             position={islandPosition}
