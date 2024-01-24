@@ -14,6 +14,7 @@ import {useGLTF} from "@react-three/drei";
 import islandScene from '../assets/3d/island.glb'
 import {a} from '@react-spring/three'
 import {useFrame, useThree} from "@react-three/fiber";
+import {log} from "three/examples/jsm/nodes/math/MathNode.js";
 
 export const Island = ({
                            isRotating,
@@ -40,12 +41,14 @@ export const Island = ({
         lastX.current = e.touches
             ? e.touches[0].clientX
             : e.clientX
+        
     }, [setIsRotating, lastX]);
 
     const handlePointerUp = useCallback((e) => {
         e.stopPropagation();
         e.preventDefault()
         setIsRotating(false)
+
     }, [setIsRotating]);
 
     const handlePointerMove = useCallback((e) => {
@@ -53,27 +56,25 @@ export const Island = ({
         e.preventDefault();
         let clientX;
         let delta;
-        const sensitivity = 0.005
+        const sensitivity = 0.001
 
         if (isRotating) {
-            if (e.touches){
-                clientX = e.touches[0].clientX
-                delta = (clientX - lastX.current) * sensitivity
-            } else {
+            if (!e.touches){
                 clientX = e.clientX
                 delta = (clientX - lastX.current) / viewport.width
+                lastX.current = clientX
+            } else {
+                clientX = e.touches[0].clientX
+                delta = (clientX - lastX.current) * sensitivity
             }
 
 
-            islandRef.current.rotation.y += delta * 0.01 * Math.PI
-            lastX.current = clientX
             rotationSpeed.current = delta * 0.01 * Math.PI
+            islandRef.current.rotation.y += delta * 0.01 * Math.PI
             setIslandSpeedValue(rotationSpeed.current)
             setIsSpeedNull(false)
         }
     }, [isRotating, viewport.width, setIslandSpeedValue, setIsSpeedNull]);
-
-
 
     const handleKeyDown = useCallback((e) => {
         if(e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
@@ -98,7 +99,7 @@ export const Island = ({
             setIsRotating(false)
             setIslandSpeedValue(0)
         }
-    }, [setIsRotating]);
+    }, [setIsRotating, setIslandSpeedValue]);
 
     useFrame(() => {
         if (!isRotating) {
@@ -141,7 +142,9 @@ export const Island = ({
         canvas.addEventListener('pointerdown', handlePointerDown)
         canvas.addEventListener('pointerup', handlePointerUp)
         canvas.addEventListener('pointermove', handlePointerMove)
-        canvas.addEventListener('touchend ', handlePointerUp)
+        canvas.addEventListener('touchend', handlePointerUp)
+        canvas.addEventListener('touchmove', handlePointerMove)
+        canvas.addEventListener('touchstart', handlePointerDown)
         document.addEventListener('keydown', handleKeyDown)
         document.addEventListener('keyup', handleKeyUp)
 
@@ -149,7 +152,9 @@ export const Island = ({
             canvas.removeEventListener('pointerdown', handlePointerDown)
             canvas.removeEventListener('pointerup', handlePointerUp)
             canvas.removeEventListener('pointermove', handlePointerMove)
-            canvas.addEventListener('touchend', handlePointerUp)
+            canvas.removeEventListener('touchend', handlePointerUp)
+            canvas.removeEventListener('touchmove', handlePointerMove)
+            canvas.removeEventListener('touchstart', handlePointerDown)
             document.removeEventListener('keydown', handleKeyDown)
             document.removeEventListener('keyup', handleKeyUp)
         }
