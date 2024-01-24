@@ -111,7 +111,7 @@ body:has(.card[data-color="green"]:hover) {
   perspective: 500px;
 }
 
-.block-container .btn-back {
+.block-container .btn-back   {
   position: absolute;
   inset: 0;
   z-index: -1;

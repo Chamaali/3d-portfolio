@@ -1,15 +1,19 @@
-import {Suspense, useEffect, useRef, useState} from "react";
+import {Suspense, useRef, useState} from "react";
 import {useForm} from "react-hook-form";
 import * as emailjs from "@emailjs/browser";
 import {Canvas} from "@react-three/fiber";
 import {Fox} from "../models/Fox.jsx";
 import Loader from "../components/Loader.jsx";
+import useAlert from "../hooks/useAlert.js";
+import Alert from "../components/Alert.jsx";
 
 const Contacts = () => {
     const {register, handleSubmit,formState: { errors }, reset} = useForm()
     const [isLoading, setIsLoading] = useState(false)
     const formRef = useRef(null)
     const [currentAnimation, setCurrentAnimation] = useState('idle')
+
+    const {alert, hideAlert, showAlert} = useAlert()
 
 
     const handleFocus = () => {
@@ -32,13 +36,21 @@ const Contacts = () => {
             },
             import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
             ).then(() => {
+                showAlert({
+                    text: 'Message sent!',
+                    type: 'success'
+                })
                 setTimeout(() => {
+                    hideAlert()
                     setCurrentAnimation('idle')
                 }, 3000)
 
             setIsLoading(false)
             reset()
         }).catch((error) => {
+            showAlert({
+                text: 'Message didn\'t received :( !'
+            })
             setIsLoading(false)
             setCurrentAnimation('idle')
             console.log(error)
@@ -47,6 +59,10 @@ const Contacts = () => {
 
     return (
         <section className='relative flex lg:flex-row flex-col max-container h-full'>
+            {alert.show && <Alert {...alert}/>}
+
+
+
             <div className='flex-1 min-w-[50%] flex flex-col'>
                 <h1 className='head-text'>Get in touch!</h1>
 
@@ -55,7 +71,6 @@ const Contacts = () => {
                     className='w-full flex flex-col gap-7 mt-14'
                     onSubmit={handleSubmit(onSubmit)}
                 >
-
                     <label className='text-black-500 font-semibold'>
                         Name
                         <input
@@ -116,7 +131,7 @@ const Contacts = () => {
                     }}
                 >
                     <directionalLight position={[0, 0, 1]} intensity={2.5}/>
-                    <ambientLight intensity={1}/>
+                    <ambientLight intensity={0.5}/>
 
                     <spotLight
                         position={[10, 10, 10]}
@@ -128,7 +143,7 @@ const Contacts = () => {
                     <Suspense fallback={<Loader/>}>
                         <Fox
                             currentAnimation={currentAnimation}
-                            position={[0.5, 0.35, 0]}
+                            position={[0.4, 0.1, 0]}
                             rotation={[12.629, -0.6, 0]}
                             scale={[0.5, 0.5, 0.5]}
                         />
