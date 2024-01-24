@@ -2,7 +2,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 
 import {skills, experiences} from '../constants'
-import CTA from "../components/CTA.jsx";
+import {CTA} from "../components/CTA.jsx";
 import {Tooltip} from "@material-tailwind/react";
 
 const About = () => {

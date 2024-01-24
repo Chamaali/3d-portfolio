@@ -37,7 +37,6 @@ export const Island = ({
         e.preventDefault()
         setIsRotating(true)
 
-
         lastX.current = e.touches
             ? e.touches[0].clientX
             : e.clientX
@@ -51,14 +50,21 @@ export const Island = ({
 
     const handlePointerMove = useCallback((e) => {
         e.stopPropagation();
-        e.preventDefault()
+        e.preventDefault();
+        let clientX;
+        let delta;
+        const sensitivity = 0.005
 
         if (isRotating) {
-            const clientX = e.touches
-                ? e.touches[0].clientX
-                : e.clientX;
+            if (e.touches){
+                clientX = e.touches[0].clientX
+                delta = (clientX - lastX.current) * sensitivity
+            } else {
+                clientX = e.clientX
+                delta = (clientX - lastX.current) / viewport.width
+            }
 
-            const delta = (clientX - lastX.current) / viewport.width
+
             islandRef.current.rotation.y += delta * 0.01 * Math.PI
             lastX.current = clientX
             rotationSpeed.current = delta * 0.01 * Math.PI
@@ -67,6 +73,8 @@ export const Island = ({
         }
     }, [isRotating, viewport.width, setIslandSpeedValue, setIsSpeedNull]);
 
+
+
     const handleKeyDown = useCallback((e) => {
         if(e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
             const rotatingFactor = 0.01 * Math.PI
@@ -74,9 +82,11 @@ export const Island = ({
             setIsSpeedNull(false)
             if(e.key === 'ArrowLeft'){
                 islandRef.current.rotation.y += rotatingFactor
+                rotationSpeed.current = 0.009;
                 setIslandSpeedValue(rotatingFactor)
             } else {
                 islandRef.current.rotation.y -= rotatingFactor
+                rotationSpeed.current = -0.009;
                 setIslandSpeedValue(-rotatingFactor)
             }
            
@@ -131,6 +141,7 @@ export const Island = ({
         canvas.addEventListener('pointerdown', handlePointerDown)
         canvas.addEventListener('pointerup', handlePointerUp)
         canvas.addEventListener('pointermove', handlePointerMove)
+        canvas.addEventListener('touchend ', handlePointerUp)
         document.addEventListener('keydown', handleKeyDown)
         document.addEventListener('keyup', handleKeyUp)
 
@@ -138,6 +149,7 @@ export const Island = ({
             canvas.removeEventListener('pointerdown', handlePointerDown)
             canvas.removeEventListener('pointerup', handlePointerUp)
             canvas.removeEventListener('pointermove', handlePointerMove)
+            canvas.addEventListener('touchend', handlePointerUp)
             document.removeEventListener('keydown', handleKeyDown)
             document.removeEventListener('keyup', handleKeyUp)
         }
