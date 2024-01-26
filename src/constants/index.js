@@ -1,19 +1,29 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
-    car,
+    bachoo,
+    cinema,
+    computer,
+    computeradv,
     contact,
-    css, estate,
-    git, github,
+    crypto,
+    css,
+    film,
+    git,
+    github,
     html,
-    javascript, linkedin,
-    nextjs, pricewise,
+    javascript,
+    jest,
+    linkedin,
+    nextjs,
     react,
     redux,
-    sass, snapgram, summiz,
-    tailwindcss, threads,
-    typescript, webpack, jest, threejs, shadcn, cinema, computer, bachoo
+    sass,
+    shadcn,
+    stack,
+    tailwindcss,
+    threejs,
+    typescript,
+    webpack
 } from "../assets/icons";
-
 
 
 export const skills = [
@@ -135,63 +145,50 @@ export const experiences = [
 
 export const socialLinks = [
     {
-        name: 'Contact',
+        name: 'Telegram',
         iconUrl: contact,
-        link: '/contact',
+        link: 'https://t.me/ahtungd',
     },
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/imikongi',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/imikonlink/',
     }
 ];
 
 export const projects = [
     {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
-    },
-    {
-        iconUrl: threads,
-        theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
-    },
-    {
-        iconUrl: car,
-        theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
-    },
-    {
-        iconUrl: snapgram,
+        iconUrl: stack,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'Stack overflow analog on Next.js',
+        description: 'Soon to be.',
+        link: '#',
     },
     {
-        iconUrl: estate,
+        iconUrl: film,
+        theme: 'btn-back-blue',
+        name: 'Film review app with voice control',
+        description: 'Soon to be.',
+        link: '#',
+    },
+    {
+        iconUrl: crypto,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        name: 'Crypto app for creating NFT',
+        description: 'Soon to be.',
+        link: '#',
     },
     {
-        iconUrl: summiz,
+        iconUrl: computeradv,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Advanced frontend development',
+        description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
+            'a basic UI kit, FSD architecture and many more.',
+        link: 'https://github.com/imikongi/advanced-frontend',
     }
 ];
