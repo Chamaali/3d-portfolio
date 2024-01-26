@@ -3,7 +3,6 @@ import {
     cinema,
     computer,
     computeradv,
-    contact,
     crypto,
     css,
     film,
@@ -143,23 +142,23 @@ export const experiences = [
     },
 ];
 
-export const socialLinks = [
-    {
-        name: 'Telegram',
-        iconUrl: contact,
-        link: 'https://t.me/ahtungd',
-    },
-    {
-        name: 'GitHub',
-        iconUrl: github,
-        link: 'https://github.com/imikongi',
-    },
-    {
-        name: 'LinkedIn',
-        iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/imikonlink/',
-    }
-];
+// export const socialLinks = [
+//     {
+//         name: 'Telegram',
+//         iconUrl: contact,
+//         link: 'https://t.me/ahtungd',
+//     },
+//     {
+//         name: 'GitHub',
+//         iconUrl: github,
+//         link: 'https://github.com/imikongi',
+//     },
+//     {
+//         name: 'LinkedIn',
+//         iconUrl: linkedin,
+//         link: 'https://www.linkedin.com/in/imikonlink/',
+//     }
+// ];
 
 export const projects = [
     {

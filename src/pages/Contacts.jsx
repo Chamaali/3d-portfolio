@@ -10,7 +10,6 @@ import Alert from "../components/Alert.jsx";
 const Contacts = () => {
     const {register, handleSubmit,formState: { errors }, reset} = useForm()
     const [isLoading, setIsLoading] = useState(false)
-    const formRef = useRef(null)
     const [currentAnimation, setCurrentAnimation] = useState('idle')
 
     const {alert, hideAlert, showAlert} = useAlert()
@@ -58,7 +57,7 @@ const Contacts = () => {
     }
 
     return (
-        <section className='relative flex lg:flex-row flex-col max-container'>
+        <section className='relative flex lg:flex-row flex-col max-container h-screen'>
             {alert.show && <Alert {...alert}/>}
 
 

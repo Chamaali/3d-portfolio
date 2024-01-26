@@ -18,7 +18,7 @@ const Projects = () => {
 
             <div className='flex flex-wrap my-20 gap-16'>
                 {projects.map((project) => (
-                    <div key={project.link} className='lg:-[400px] w-full gap-20 items-start lg:flex'>
+                    <div key={project.link} className='lg:w-[400px] w-full gap-20 items-start lg:flex'>
                         <div className='block-container w-12 h-12'>
                             <div className={`btn-back rounded-xl ${project.theme}`}/>
 
