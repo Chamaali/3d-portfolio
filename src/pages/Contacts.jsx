@@ -1,4 +1,4 @@
-import {Suspense, useRef, useState} from "react";
+import {Suspense, useState} from "react";
 import {useForm} from "react-hook-form";
 import * as emailjs from "@emailjs/browser";
 import {Canvas} from "@react-three/fiber";
@@ -14,6 +14,22 @@ const Contacts = () => {
 
     const {alert, hideAlert, showAlert} = useAlert()
 
+    const adjustFoxScale = () => {
+        let screenScale = [0.7, 0.7, 0.7]
+        let screenPosition = [0.4, 0.1, 0]
+        let rotation = [12.629, -0.6, 0]
+
+        if(window.innerWidth < 430) {
+            screenScale = [0.7, 0.7, 0.7]
+        } else if(window.innerWidth < 768 && window.innerWidth > 430){
+            screenScale = [0.8, 0.8, 0.8]
+            screenPosition = [1, 0.4, 0]
+            rotation = [12.629, -0.8, 0]
+        }
+
+        return [screenScale, screenPosition, rotation]
+    }
+    const [screenScale, screenPosition, rotation] = adjustFoxScale()
 
     const handleFocus = () => {
         setCurrentAnimation('walk')
@@ -57,17 +73,15 @@ const Contacts = () => {
     }
 
     return (
-        <section className='relative flex lg:flex-row flex-col max-container h-screen'>
+        <section className='relative flex lg:flex-row flex-col-reverse max-container h-screen'>
             {alert.show && <Alert {...alert}/>}
 
-
-
             <div className='flex-1 min-w-[50%] flex flex-col'>
-                <h1 className='head-text'>Get in touch!</h1>
+                <h1 className='head-text hidden md:block'>Get in touch!</h1>
 
                 <form
                     action=""
-                    className='w-full flex flex-col gap-7 mt-14'
+                    className='w-full flex flex-col gap-7 lg:mt-14'
                     onSubmit={handleSubmit(onSubmit)}
                 >
                     <label className='text-black-500 font-semibold'>
@@ -120,7 +134,7 @@ const Contacts = () => {
 
                 </form>
             </div>
-            <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]'>
+            <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] '>
                 <Canvas
                     camera={{
                         position: [0, 0, 5],
@@ -142,13 +156,15 @@ const Contacts = () => {
                     <Suspense fallback={<Loader/>}>
                         <Fox
                             currentAnimation={currentAnimation}
-                            position={[0.4, 0.1, 0]}
-                            rotation={[12.629, -0.6, 0]}
-                            scale={[0.5, 0.5, 0.5]}
+                            position={screenPosition}
+                            rotation={rotation}
+                            scale={screenScale}
                         />
                     </Suspense>
                 </Canvas>
             </div>
+            {/*<h1 className='head-text lg:hidden py-3'>Get in touch!</h1>*/}
+
         </section>
     );
 };

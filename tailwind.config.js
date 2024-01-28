@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'max-h-se': {'raw': '(max-height: 568px)'}
+      },
       colors: {
         gray: {
           200: "#D5DAE1"

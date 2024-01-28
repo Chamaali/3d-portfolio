@@ -11,9 +11,11 @@ const Projects = () => {
             </h1>
 
             <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-                <p>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa cumque dolore earum, expedita fugiat laboriosam obcaecati reiciendis suscipit veniam? Aspernatur corporis cumque, explicabo nam omnis pariatur quis tenetur veritatis.</span><span>Consequatur deleniti ipsum, iusto maxime nisi nobis quis similique. Accusantium commodi, cum doloribus ducimus, eaque eligendi explicabo facilis id ipsa iusto magnam necessitatibus quibusdam quidem quisquam recusandae reiciendis sit vel!</span><span>Doloremque enim illum laboriosam necessitatibus ratione. Ducimus facere facilis molestiae nesciunt optio quam sint! Consequuntur cumque distinctio error harum laborum pariatur voluptas voluptatem. Debitis, excepturi perferendis quod quos reiciendis temporibus.</span>
-                </p>
+               <p>
+                   I have always been interested in working with some new technologies and trying my hand
+                   at different approaches. I am currently working on 4 projects and as they are ready they will be added to this site.
+               </p>
+
             </div>
 
             <div className='flex flex-wrap my-20 gap-16'>

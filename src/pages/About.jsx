@@ -23,7 +23,7 @@ const About = () => {
             <div className='py-10 flex flex-col'>
                 <h3 className='subhead-text'>My skills</h3>
 
-                <div className='mt-16 flex flex-wrap gap-12'>
+                <div className='mt-9 flex flex-wrap justify-evenly gap-20'>
                     {skills.map((skill) => (
                         <Tooltip key={skill.imageUrl}
                                  content={skill.name}

@@ -1,4 +1,3 @@
-import React from 'react';
 import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
@@ -8,7 +7,7 @@ const Navbar = () => {
             flex-center font-bold shadow-md'>
                 <p className='blue-gradient_text'>IM</p>
             </NavLink>
-           <nav className='flex text-lg gap-7 font-medium'>
+           <nav className='flex text-sm lg:text-lg gap-7 font-medium'>
                <NavLink to={'/about'} className={({isActive}) => isActive? 'text-blue-500': 'text-black'}>
                    About
                </NavLink>

@@ -14,7 +14,6 @@ import {useGLTF} from "@react-three/drei";
 import islandScene from '../assets/3d/island.glb'
 import {a} from '@react-spring/three'
 import {useFrame, useThree} from "@react-three/fiber";
-import {log} from "three/examples/jsm/nodes/math/MathNode.js";
 
 export const Island = ({
                            isRotating,
@@ -45,36 +44,39 @@ export const Island = ({
     }, [setIsRotating, lastX]);
 
     const handlePointerUp = useCallback((e) => {
-        e.stopPropagation();
         e.preventDefault()
         setIsRotating(false)
-
     }, [setIsRotating]);
 
     const handlePointerMove = useCallback((e) => {
         e.stopPropagation();
         e.preventDefault();
-        let clientX;
+        const sensitivity = 0.01
         let delta;
-        const sensitivity = 0.001
+        let clientX;
 
-        if (isRotating) {
-            if (!e.touches){
-                clientX = e.clientX
-                delta = (clientX - lastX.current) / viewport.width
-                lastX.current = clientX
-            } else {
-                clientX = e.touches[0].clientX
-                delta = (clientX - lastX.current) * sensitivity
-            }
+        if (!isRotating) return
 
+        if (!e.touches){
+            clientX = e.clientX
+            delta = (clientX - lastX.current) / viewport.width
+            lastX.current = clientX
 
-            rotationSpeed.current = delta * 0.01 * Math.PI
-            islandRef.current.rotation.y += delta * 0.01 * Math.PI
-            setIslandSpeedValue(rotationSpeed.current)
-            setIsSpeedNull(false)
+        } else {
+            clientX = e.touches[0].clientX
+            console.log(clientX)
+            delta = (clientX - lastX.current) * sensitivity
         }
+
+        const factor = delta * 0.01 * Math.PI
+
+        rotationSpeed.current = factor
+        islandRef.current.rotation.y += factor
+        setIslandSpeedValue(rotationSpeed.current)
+        setIsSpeedNull(false)
+
     }, [isRotating, viewport.width, setIslandSpeedValue, setIsSpeedNull]);
+
 
     const handleKeyDown = useCallback((e) => {
         if(e.key === 'ArrowLeft' || e.key === 'ArrowRight'){
@@ -143,7 +145,7 @@ export const Island = ({
         canvas.addEventListener('pointerup', handlePointerUp)
         canvas.addEventListener('pointermove', handlePointerMove)
         canvas.addEventListener('touchend', handlePointerUp)
-        canvas.addEventListener('touchmove', handlePointerMove)
+
         canvas.addEventListener('touchstart', handlePointerDown)
         document.addEventListener('keydown', handleKeyDown)
         document.addEventListener('keyup', handleKeyUp)
@@ -153,7 +155,7 @@ export const Island = ({
             canvas.removeEventListener('pointerup', handlePointerUp)
             canvas.removeEventListener('pointermove', handlePointerMove)
             canvas.removeEventListener('touchend', handlePointerUp)
-            canvas.removeEventListener('touchmove', handlePointerMove)
+
             canvas.removeEventListener('touchstart', handlePointerDown)
             document.removeEventListener('keydown', handleKeyDown)
             document.removeEventListener('keyup', handleKeyUp)

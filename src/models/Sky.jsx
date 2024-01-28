@@ -4,6 +4,7 @@ import {useRef} from "react";
 import {useFrame} from "@react-three/fiber";
 
 const Sky = ({islandSpeedValue}) => {
+
     const sky = useGLTF(skyScene)
     const skyRef = useRef()
 
