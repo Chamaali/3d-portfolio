@@ -52,10 +52,8 @@ const About = () => {
 
                 <div className='mt-5 flex flex-col gap-3 text-slate-500'>
                     <p>
-                        I worked as a translator for 5+ years, but than decided to change my career and become a developer!🤔
+                        I worked as a translator for 8+ years, but decided to change my career and become a developer!🤔
                         <br/>
-                        At first I started to learn Python, but soon I&apos;ve become fascinated by frontend and React SPA.
-                        That was the moment that define my future and became my present🤗
                     </p>
                 </div>
 

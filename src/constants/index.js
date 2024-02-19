@@ -1,5 +1,4 @@
 import {
-    bachoo,
     cinema,
     computer,
     computeradv,
@@ -7,11 +6,9 @@ import {
     css,
     film,
     git,
-    github,
     html,
     javascript,
     jest,
-    linkedin,
     nextjs,
     react,
     redux,
@@ -106,7 +103,7 @@ export const experiences = [
         company_name: "Freelance",
         icon: cinema,
         iconBg: "#accbe1",
-        date: "October 2015 - March 2021",
+        date: "October 2014 - Present",
         points: [
             "Translating films and tv-shows from English to Russian and Ukrainian.",
             "Collaborating with editors and other translators.",
@@ -115,29 +112,18 @@ export const experiences = [
         ],
     },
     {
-        title: "Junior React developer",
-        company_name: "ITOP1000",
+        title: "Studying",
         icon: computer,
         iconBg: "#fbc3bc",
-        date: "August 2021 - February 2022",
-        points: [
-            "Designed and developed a Websockets chat for technical support of the users. That helped to reduce the load on phone and email support and improved UX.",
-            "Created a customizable and adaptable profile page where user can see his wallets, create new ones and edit personal information.",
-            "Created a registration and authorisation forms with Formik"
-        ],
-    },
-    {
-        title: "React Developer",
-        company_name: "Bachoo Studio",
-        icon: bachoo,
-        iconBg: "black",
-        date: "Jan 2022 - Present",
-        points: [
-            "Implemented an intuitive filter, search and sorting interfaces to improve user experience, operating data through Redux Toolkit.",
-            "Set up a Webpack configuration for build optimization and decomposition of config files, that helped to speed up a build up to 30% and shrink its size up to 20%.",
-            "Developed an internal review and rating system, that is connected to Tripadvisor API, developed an infinite scroll for reviews.",
-            "Developed a map-component , using Leaflet and connected it to database with registered hotels, add a search field, marking feature and feature for search in certain area.",
-            "Increased components test coverage from 40% to 71%, using Jest framework, that helped to imrove stability of the application"
+        date: "October 2023 - Present",
+        points: ['Finished several courses, such as: "Web-разработчик", "Полный курс по JavaScript + React - с нуля до результата" on Udemy',
+            'Finished Youtube-courses and, as a result, created several projects',
+            'Studied for 3-4 hours every day',
+            'Took couple sessions with mentor for deeper understanding of my\n' +
+            'weak points',
+            'Right now working on my main pet project and building\n' +
+            'application from scratch with bundle setup, theming,\n' +
+            '    internationalization, infinite scroll, and so on'
         ],
     },
 ];

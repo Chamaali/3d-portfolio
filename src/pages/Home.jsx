@@ -108,7 +108,7 @@ const Home = () => {
                 </Canvas>
 
             <div className='absolute bottom-2 left-2'>
-                <img src={!isPlayingMusic ? soundoff : soundon}
+                <img src={isPlayingMusic ? soundon : soundoff}
                      alt="music"
                      className='w-7 h-7 cursor-pointer object-contain'
                      onClick={() => setIsPlayingMusic(!isPlayingMusic)}
