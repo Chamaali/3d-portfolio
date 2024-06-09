@@ -76,9 +76,9 @@ const Contacts = () => {
     return (
         <section className='relative lg:flex-row  max-container h-screen '>
             
-<div className="grid justify-items-stretch bg-pink-400 bg-gradient-to-b shadow-xl bg-gradient-to-br from-blue-600  to-white p-5 rounded-xl">
+<div className="grid justify-items-stretch  p-8 rounded-xl  bg-white shadow-2xl  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
 <div>
-    <h1 className="text-3xl font- font-bold pb-3">Contact me</h1>
+    <h1 className="text-3xl text-center font-medium pb-3">Contact me</h1>
     <p className="text-lg">I'm always open to new projects and opportunities.</p>
     
     <div className="grid  gap-4">
@@ -105,7 +105,7 @@ const Contacts = () => {
         </tbody>
       </table>
     </div>
-<div className=" bg-red-100">
+<div className="grid  place-items-end ">
       <div className='lg:w-1/2 lg:h-auto md:h-[550px] '>
                 <Canvas
                     camera={{
