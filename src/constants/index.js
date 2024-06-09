@@ -59,18 +59,8 @@ export const skills = [
         type: "Version Control",
     },
     {
-        imageUrl: webpack,
-        name: "Webpack",
-        type: "Build",
-    },
-    {
         imageUrl: nextjs,
         name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
         type: "Frontend",
     },
     {
@@ -78,55 +68,111 @@ export const skills = [
         name: "Tailwind CSS",
         type: "Frontend",
     },
-    {
-        imageUrl: jest,
-        name: "Jest",
-        type: "Testing",
-    },
-    {
-        imageUrl: threejs,
-        name: "ThreeJs",
-        type: "Frontend",
-    },
-    {
-        imageUrl: shadcn,
-        name: "shadcn",
-        type: "UI",
-    },
+    
 
 
 ];
 
 export const experiences = [
     {
-        title: "Translator",
-        company_name: "Freelance",
-        icon: cinema,
-        iconBg: "#accbe1",
-        date: "October 2014 - Present",
+        title: "Associate Production",
+        company_name: "Innodata Lanka PVT (LTD)",
+        icon: crypto,
+        iconBg: "#fbc3bc",
+        date: "2020 - 2021",
         points: [
-            "Translating films and tv-shows from English to Russian and Ukrainian.",
-            "Collaborating with editors and other translators.",
-            "For a couple of months I've worked as a translators managers.",
-            "Created a video-guide for effective and fast work for my colleagues.",
+            "Information Technology Company",
+            "Galle, Sri Lanka",
         ],
     },
     {
-        title: "Studying",
-        icon: computer,
+        title: "Production Associate",
+        icon: crypto,
         iconBg: "#fbc3bc",
-        date: "October 2023 - Present",
-        points: ['Finished several courses, such as: "Web-разработчик", "Полный курс по JavaScript + React - с нуля до результата" on Udemy',
-            'Finished Youtube-courses and, as a result, created several projects',
-            'Studied for 3-4 hours every day',
-            'Took couple sessions with mentor for deeper understanding of my\n' +
-            'weak points',
-            'Right now working on my main pet project and building\n' +
-            'application from scratch with bundle setup, theming,\n' +
-            '    internationalization, infinite scroll, and so on'
+        date: "2023 - 2024",
+        points: ['Software Company',
+            'Christchurch, New Zealand',
         ],
     },
+    {
+        title: "BSc(Hons) in Computing and Information Systems",
+        icon: computeradv,
+        iconBg: "#accbe1",
+        date: "2020 - 2025",
+        points: ['Sabaragamuwa University of Sri Lanka',
+            'Belihuloya, Sri Lanka',
+        ],
+    },
+    {
+        title: "Diploma in Information & Communication Technology and System Development (ICT & SD)",
+        icon: computeradv,
+        iconBg: "#accbe1",
+        date: "2019 - 2020",
+        points: ['IDM Southern Campus',
+            'Galle, Sri Lanka',
+        ],
+    },
+    {
+        title: "Certificate in Information & Communication Technology",
+        icon: computeradv,
+        iconBg: "#accbe1",
+        date: "2008 - 2010",
+        points: ['E Base Lanka International',
+            'Yakkalamulla, Sri Lanka',
+        ],
+    },
+    {
+        title: "Professional Certificate in Marketing",
+        icon: computeradv,
+        iconBg: "#accbe1",
+        date: "2023 - 2024",
+        points: ['Sri Lanka Institute of Marketing (SLIM)',
+            'Matara, Sri Lanka',
+        ],
+    },
+    {
+        title: "High School Education",
+        icon: computeradv,
+        iconBg: "#accbe1",
+        date: "2009 - 2017",
+        points: ['Janadhipathi Balika Vidyalaya',
+            'Galle, Sri Lanka',
+        ],
+    },
+
+
 ];
+
+// export const education = [
+//     {
+//         title: "Translator",
+//         company_name: "Freelance",
+//         icon: cinema,
+//         iconBg: "#accbe1",
+//         date: "October 2014 - Present",
+//         points: [
+//             "Translating films and tv-shows from English to Russian and Ukrainian.",
+//             "Collaborating with editors and other translators.",
+//             "For a couple of months I've worked as a translators managers.",
+//             "Created a video-guide for effective and fast work for my colleagues.",
+//         ],
+//     },
+//     {
+//         title: "Studying",
+//         icon: computer,
+//         iconBg: "#fbc3bc",
+//         date: "October 2023 - Present",
+//         points: ['Finished several courses, such as: "Web-разработчик", "Полный курс по JavaScript + React - с нуля до результата" on Udemy',
+//             'Finished Youtube-courses and, as a result, created several projects',
+//             'Studied for 3-4 hours every day',
+//             'Took couple sessions with mentor for deeper understanding of my\n' +
+//             'weak points',
+//             'Right now working on my main pet project and building\n' +
+//             'application from scratch with bundle setup, theming,\n' +
+//             '    internationalization, infinite scroll, and so on'
+//         ],
+//     },
+// ];
 
 // export const socialLinks = [
 //     {
@@ -148,25 +194,25 @@ export const experiences = [
 
 export const projects = [
     {
-        iconUrl: stack,
+        iconUrl: nextjs,
         theme: 'btn-back-pink',
-        name: 'Stack overflow analog on Next.js',
-        description: 'Soon to be.',
-        link: '#',
+        name: 'Lakshmi Ayurweda',
+        description: ['This is a website for a Ayurvedic clinic. I\'m developing both frontend and backend. There is an admin panel to update data by the admin.'],
+        link: 'https://github.com/Chamaali/Lakshmi-Ayurweda',
     },
     {
         iconUrl: film,
         theme: 'btn-back-blue',
         name: 'Film review app with voice control',
         description: 'Soon to be.',
-        link: '#',
+        link: 'https://github.com/Chamaali/sentiment-analysis-project',
     },
     {
         iconUrl: crypto,
         theme: 'btn-back-black',
         name: 'Crypto app for creating NFT',
         description: 'Soon to be.',
-        link: '#',
+        link: 'https://github.com/orgs/Tea-Test/repositories',
     },
     {
         iconUrl: computeradv,
@@ -174,6 +220,32 @@ export const projects = [
         name: 'Advanced frontend development',
         description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
             'a basic UI kit, FSD architecture and many more.',
-        link: 'https://github.com/imikongi/advanced-frontend',
+        link: 'https://github.com/Chamaali/Star_Mobile',
+    },
+    {
+        iconUrl: computeradv,
+        theme: 'btn-back-yellow',
+        name: 'Advanced frontend development',
+        description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
+            'a basic UI kit, FSD architecture and many more.',
+        link: 'https://duelo.lk/',
+    },
+    ,
+    {
+        iconUrl: computeradv,
+        theme: 'btn-back-yellow',
+        name: 'Advanced frontend development',
+        description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
+            'a basic UI kit, FSD architecture and many more.',
+        link: 'https://ieee.sab.ac.lk/',
+    },
+    ,
+    {
+        iconUrl: computeradv,
+        theme: 'btn-back-yellow',
+        name: 'Advanced frontend development',
+        description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
+            'a basic UI kit, FSD architecture and many more.',
+        link: 'hhttps://github.com/Chamaali/Speedy-Loan',
     }
 ];

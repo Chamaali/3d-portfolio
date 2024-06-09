@@ -51,7 +51,7 @@ const Projects = () => {
                                       className='font-semibold text-blue-600'
                                 >
                                     <div className='mt-2'>
-                                        Live Link
+                                        Live/GitHub
                                         <img src={arrow}
                                              alt="arrow"
                                              className='w-4 h-4 object-contain'
@@ -67,7 +67,7 @@ const Projects = () => {
 
             <hr className='border-slate-200'/>
 
-            <CTA/>
+            {/* <CTA/> */}
         </section>
     );
 };

@@ -6,6 +6,7 @@ import {Fox} from "../models/Fox.jsx";
 import Loader from "../components/Loader.jsx";
 import useAlert from "../hooks/useAlert.js";
 import Alert from "../components/Alert.jsx";
+import Bird from "../models/Bird.jsx";
 
 const Contacts = () => {
     const {register, handleSubmit,formState: { errors }, reset} = useForm()
@@ -73,68 +74,39 @@ const Contacts = () => {
     }
 
     return (
-        <section className='relative flex lg:flex-row flex-col-reverse max-container h-screen'>
-            {alert.show && <Alert {...alert}/>}
-
-            <div className='flex-1 min-w-[50%] flex flex-col'>
-                <h1 className='head-text hidden md:block'>Get in touch!</h1>
-
-                <form
-                    action=""
-                    className='w-full flex flex-col gap-7 lg:mt-14'
-                    onSubmit={handleSubmit(onSubmit)}
-                >
-                    <label className='text-black-500 font-semibold'>
-                        Name
-                        <input
-                            {...register("name", {required: true})}
-                            className='input'
-                            placeholder='Enter your name...'
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                        />
-                        {errors.name && <span className='text-red-600'>This  field is required</span>}
-                    </label>
-
-                    <label className='text-black-500 font-semibold'>
-                        Email
-                        <input
-                            {...register("email", {required: true})}
-                            className='input'
-                            type='email'
-                            placeholder='example@mail.com'
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                        />
-                        {errors.name && <span className='text-red-600'>This  field is required</span>}
-                    </label>
-
-                    <label className='text-black-500 font-semibold'>
-                        Your message
-                        <textarea
-                            {...register("message", {required: true})}
-                            className='input'
-                            rows={4}
-                            placeholder='Just write what you want!'
-                            onFocus={handleFocus}
-                            onBlur={handleBlur}
-                        />
-                        {errors.name && <span className='text-red-600'>This  field is required</span>}
-                    </label>
-
-
-                    <button
-                        className='btn'
-                        onFocus={handleFocus}
-                        onBlur={handleBlur}
-                        disabled={isLoading}
-                    >
-                        {isLoading ? 'Sending...' : 'Send message'}
-                    </button>
-
-                </form>
-            </div>
-            <div className='lg:w-1/2 w-full lg:h-auto md:h-[550px] '>
+        <section className='relative lg:flex-row  max-container h-screen '>
+            
+<div className="grid justify-items-stretch bg-pink-400 bg-gradient-to-b shadow-xl bg-gradient-to-br from-blue-600  to-white p-5 rounded-xl">
+<div>
+    <h1 className="text-3xl font- font-bold pb-3">Contact me</h1>
+    <p className="text-lg">I'm always open to new projects and opportunities.</p>
+    
+    <div className="grid  gap-4">
+    <table className=" mt-8 table-auto place-self-center">
+        
+        <tbody>
+          <tr>
+            <td className="px-4 py-2  text-right text-lg">Phone:</td>
+            <td className="px-4 py-2 font-semibold  text-xl">+94 76 600 81</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2  text-right text-lg">Whatsapp:</td>
+            <td className="px-4 py-2 font-semibold  text-xl">+94 76 600 81</td>
+          </tr><tr>
+            <td className="px-4 py-2  text-right text-lg">Email:</td>
+            <td className="px-4 py-2 font-semibold  text-xl">chamaalidilka@gmail.com</td>
+          </tr><tr>
+            <td className="px-4 py-2  text-right text-lg">LinkedIn:</td>
+            <td className="px-4 py-2 font-semibold  text-xl">https://www.linkedin.com/in/chamaali-dilka/</td>
+          </tr><tr>
+            <td className="px-4 py-2  text-right text-lg">Github:</td>
+            <td className="px-4 py-2 font-semibold  text-xl">Chamaali</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+<div className=" bg-red-100">
+      <div className='lg:w-1/2 lg:h-auto md:h-[550px] '>
                 <Canvas
                     camera={{
                         position: [0, 0, 5],
@@ -160,11 +132,15 @@ const Contacts = () => {
                             rotation={rotation}
                             scale={screenScale}
                         />
+{/* <Bird/> */}
                     </Suspense>
                 </Canvas>
+            </div> 
             </div>
-            {/*<h1 className='head-text lg:hidden py-3'>Get in touch!</h1>*/}
+        
+</div>
 
+</div>
         </section>
     );
 };

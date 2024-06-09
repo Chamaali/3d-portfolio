@@ -9,14 +9,12 @@ const About = () => {
     return (
         <section className='max-container h-full'>
             <h1 className='head-text'>
-                Hello, I&apos;m <span className='blue-gradient_text font-semibold drop-shadow'>Ivan</span>
+                Hello, I&apos;m <span className='blue-gradient_text font-semibold drop-shadow'>Chamaali Dilka</span>
             </h1>
 
             <div className='mt-5 flex flex-col gap-3 text-slate-500'>
                 <p>
-                    Front-end developer from Ukraine, based in Poland. I&apos;m specialized in creating
-                    fascinating and maintainable applications on React and eager to help businesses
-                    achieve their goals
+                Enthusiastic undergraduate pursuing a degree in Computing and Information Systems, specializing in Full-stack Web Development and Android Development, with 5+ years of experience in web development. I am a self-motivated and self learner. Eager to leverage my skills and knowledge in a Software Engineering internship role to contribute effectively to innovative projects and provide an effective service. 
                 </p>
             </div>
 
@@ -48,16 +46,16 @@ const About = () => {
             </div>
 
             <div className='py-16'>
-                <h3 className='subhead-text'>Work experience</h3>
+                <h3 className='subhead-text'>Experience and Education</h3>
 
-                <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+                {/* <div className='mt-5 flex flex-col gap-3 text-slate-500'>
                     <p>
                         I worked as a translator for 8+ years, but decided to change my career and become a developer!🤔
                         <br/>
                     </p>
-                </div>
+                </div> */}
 
-                <div className='mt-12 flex'>
+                <div className='mt-5 flex'>
                     <VerticalTimeline>
                         {experiences.map((experience) => (
                             <VerticalTimelineElement
@@ -107,7 +105,7 @@ const About = () => {
 
             <hr className='border-slate-200'/>
 
-            <CTA/>
+            {/* <CTA/> */}
         </section>
     );
 };
