@@ -6,7 +6,7 @@ import {soundoff, soundon} from "../assets/icons/index.js";
 
 import {skills, experiences} from '../constants'
 import {CTA} from "../components/CTA.jsx";
-import {Tooltip} from "@material-tailwind/react";
+import {timeline, Tooltip} from "@material-tailwind/react";
 
 const About = () => {
     const audioRef = useRef(new Audio(sakura))
@@ -41,7 +41,7 @@ const About = () => {
             <div className='py-10 flex flex-col'>
                 <h3 className='subhead-text'>My skills</h3>
 
-                <div className='mt-9 flex flex-wrap justify-evenly gap-20'>
+                <div className='mt-9 flex flex-wrap justify-evenly gap-5'>
                     {skills.map((skill) => (
                         <Tooltip key={skill.imageUrl}
                                  content={skill.name}
@@ -49,10 +49,12 @@ const About = () => {
                                  className='bg-gray-600 px-5 py-2 rounded-xl font-semibold'
                                  animate={{
                                      mount: { scale: 1, y: 0 },
-                                     unmount: { scale: 0, y: -25 }
+                                     unmount: { scale: 0, y: -25 },
+                                     
+
                                  }}
                         >
-                            <div className='block-container w-20 h-20'>
+                            <div className='block-container w-10 h-10'>
                                 <div className='btn-back rounded-xl'/>
                                 <div className='btn-front rounded-xl flex-center'>
                                     <img className='w-1/2 h-1/2 object-contain'
