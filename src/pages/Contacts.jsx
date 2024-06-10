@@ -74,40 +74,132 @@ const Contacts = () => {
     }
 
     return (
-        <section className='relative lg:flex-row  max-container h-screen '>
+//         <section className='relative lg:flex-row  max-container h-screen '>
             
-<div className="grid justify-items-stretch  p-8 rounded-xl  bg-white shadow-2xl  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-<div>
-    <h1 className="text-3xl text-center font-medium pb-3">Contact me</h1>
-    <p className="text-lg">I'm always open to new projects and opportunities.</p>
+// <div className="grid justify-items-stretch  p-8 rounded-xl  bg-white shadow-2xl  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+// <div>
+//     <h1 className="text-3xl text-center font-medium pb-3">Contact me</h1>
+//     <p className="text-lg">I'm always open to new projects and opportunities.</p>
     
-    <div className="grid  gap-4">
-    <table className=" mt-8 table-auto place-self-center">
+//     <div className="grid  gap-4">
+//     <table className=" mt-8 table-auto place-self-center">
         
+//         <tbody>
+//           <tr>
+//             <td className="px-4 py-2  text-right text-lg">Phone:</td>
+//             <td className="px-4 py-2 font-semibold  text-xl">+94 76 600 81</td>
+//           </tr>
+//           <tr>
+//             <td className="px-4 py-2  text-right text-lg">Whatsapp:</td>
+//             <td className="px-4 py-2 font-semibold  text-xl">+94 76 600 81</td>
+//           </tr><tr>
+//             <td className="px-4 py-2  text-right text-lg">Email:</td>
+//             <td className="px-4 py-2 font-semibold  text-xl">chamaalidilka@gmail.com</td>
+//           </tr><tr>
+//             <td className="px-4 py-2  text-right text-lg">LinkedIn:</td>
+//             <td className="px-4 py-2 font-semibold  text-xl">https://www.linkedin.com/in/chamaali-dilka/</td>
+//           </tr><tr>
+//             <td className="px-4 py-2  text-right text-lg">Github:</td>
+//             <td className="px-4 py-2 font-semibold  text-xl">Chamaali</td>
+//           </tr>
+//         </tbody>
+//       </table>
+//     </div>
+// <div className="grid  place-items-end ">
+//       <div className='lg:w-1/2 lg:h-auto md:h-[550px] '>
+//                 <Canvas
+//                     camera={{
+//                         position: [0, 0, 5],
+//                         fov: 75,
+//                         near: 0.1,
+//                         far: 1000,
+//                     }}
+//                 >
+//                     <directionalLight position={[0, 0, 1]} intensity={2.5}/>
+//                     <ambientLight intensity={0.5}/>
+
+//                     <spotLight
+//                         position={[10, 10, 10]}
+//                         angle={0.15}
+//                         penumbra={1}
+//                         intensity={2}
+//                     />
+
+//                     <Suspense fallback={<Loader/>}>
+//                         <Fox
+//                             currentAnimation={currentAnimation}
+//                             position={screenPosition}
+//                             rotation={rotation}
+//                             scale={screenScale}
+//                         />
+// {/* <Bird/> */}
+//                     </Suspense>
+//                 </Canvas>
+//             </div> 
+//             </div>
+        
+// </div>
+
+// </div>
+//         </section>
+
+<section className='max-container h-full '>
+            <h1 className='head-text'>
+                <span className='blue-gradient_text font-semibold drop-shadow'>Contact me</span>
+            </h1>
+
+            <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+               <p>
+               Thank you for visiting my website! I am a passionate software engineer specializing in building robust, scalable applications. Whether you have a project idea, a collaboration opportunity, or just want to connect, I'd love to hear from you. Please feel free to reach out to me through any of the following methods.
+               </p>
+
+            
+
+            
+
+            <hr className='border-slate-200'/>
+
+
+            <div className="w-full max-w-md mx-auto">
+      <table className="lg:mt-8 table-auto  w-full">
         <tbody>
           <tr>
-            <td className="px-4 py-2  text-right text-lg">Phone:</td>
-            <td className="px-4 py-2 font-semibold  text-xl">+94 76 600 81</td>
+            <td className="px-4 py-2 text-right md:text-left text-sm">Phone:</td>
+            <td className="px-4 py-2 font-semibold">+94763560081</td>
           </tr>
           <tr>
-            <td className="px-4 py-2  text-right text-lg">Whatsapp:</td>
-            <td className="px-4 py-2 font-semibold  text-xl">+94 76 600 81</td>
-          </tr><tr>
-            <td className="px-4 py-2  text-right text-lg">Email:</td>
-            <td className="px-4 py-2 font-semibold  text-xl">chamaalidilka@gmail.com</td>
-          </tr><tr>
-            <td className="px-4 py-2  text-right text-lg">LinkedIn:</td>
-            <td className="px-4 py-2 font-semibold  text-xl">https://www.linkedin.com/in/chamaali-dilka/</td>
-          </tr><tr>
-            <td className="px-4 py-2  text-right text-lg">Github:</td>
-            <td className="px-4 py-2 font-semibold  text-xl">Chamaali</td>
+            <td className="px-4 py-2 text-right md:text-left text-sm">WhatsApp:</td>
+            <td className="px-4 py-2 font-semibold">+94763560081</td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 text-right md:text-left text-sm">Email:</td>
+            <td className="px-4 py-2 font-semibold">
+              <a className="underline" href="chamaalidilka@gmail.com">chamaalidilka@</a>
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 text-right md:text-left text-sm">LinkedIn:</td>
+            <td className="px-4 py-2 font-semibold">
+              <a className="underline" href="https://www.linkedin.com/in/chamaali-dilka/" target="_blank" rel="noopener noreferrer">
+              Chamaali Dilka
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td className="px-4 py-2 text-right md:text-left text-sm">Github:</td>
+            <td className="px-4 py-2 font-semibold">
+              <a className="underline" href="https://github.com/Chamaali" target="_blank" rel="noopener noreferrer">
+                Chamaali
+              </a>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
-<div className="grid  place-items-end ">
-      <div className='lg:w-1/2 lg:h-auto md:h-[550px] '>
-                <Canvas
+ <div className="grid  place-items-end ">
+       <div className='lg:w-1/2 lg:h-auto md:h-[550px] '>
+                 
+<Canvas
                     camera={{
                         position: [0, 0, 5],
                         fov: 75,
@@ -137,10 +229,9 @@ const Contacts = () => {
                 </Canvas>
             </div> 
             </div>
-        
-</div>
 
-</div>
+            {/* <CTA/> */}
+            </div>
         </section>
     );
 };

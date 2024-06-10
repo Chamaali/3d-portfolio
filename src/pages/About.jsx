@@ -45,6 +45,10 @@ const About = () => {
 
             </div>
 
+            <hr className='border-slate-200'/>
+
+
+
             <div className='py-16'>
                 <h3 className='subhead-text'>Experience and Education</h3>
 
@@ -106,6 +110,12 @@ const About = () => {
             <hr className='border-slate-200'/>
 
             {/* <CTA/> */}
+
+
+            {/* <div className='py-16'>
+                <h3 className='subhead-text'>Achievements, Awards and Certification</h3>
+                
+                </div> */}
         </section>
     );
 };
