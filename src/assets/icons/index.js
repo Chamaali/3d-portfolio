@@ -33,8 +33,11 @@ import docker from './docker.png'
 import java from './java.png'
 import php from './php.png'
 import books from './books.png'
+import hero from './../images/hero.jpg'
+import research from './research.png'
 
 export {
+    research,
     bootstrap,
     python,
     csharp,
@@ -45,6 +48,7 @@ export {
     php,
     books,
     css,
+    hero,
     git,
     github,
     html,

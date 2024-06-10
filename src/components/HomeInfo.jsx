@@ -6,41 +6,54 @@ const InfoBox = ({text, link, btnText}) => (
         <p className='font-medium sm:text-lg text-center'>{text}</p>
         <Link to={link} className='neo-brutalism-white neo-btn'>
             {btnText}
-            <img src={arrow} alt="arrow" className='w-4 h-4 object-contain'/>
         </Link>
     </div>
 )
 
+// (
+//     <h1 className='sm:text-lg sm:leading-snug text-center neo-brutalism-blue py-3 px-6 text-white mx-5'>
+//         I&apos;m <span className='font-semibold text-lg'>Chamaali Dilka</span> <span className='wave'>👋</span>
+//         <br/>
+//         Software Engineer with passion to both Web Development and Android Development..
+//     </h1>
+// ),
 
 const renderContent = {
     1: (
-        <h1 className='sm:text-lg sm:leading-snug text-center neo-brutalism-blue py-3 px-6 text-white mx-5'>
-            I&apos;m <span className='font-semibold text-lg'>Chamaali Dilka</span> <span className='wave'>👋</span>
-            <br/>
-            Software Engineer with passion to both Web Development and Android Development..
-        </h1>
+        <InfoBox
+            text='Let me tell you about myself..'
+            btnText='Click me'
+            link={'/about'}
+        />
     ),
     2: (
         <InfoBox
-            text='Follow me, I&apos;ll tell you about my experience'
-            btnText='Show it!'
-            link={'/about'}
+            text='I&apos;m collecting memories..'
+            btnText='Click me'
+            link={'/gallery'}
         />
 
     ),
     3: (
         <InfoBox
-            text='You&apos;re interested in some projects?😊'
-            btnText='Let&apos;s look!'
+            text='You&apos;re interested in some projects?'
+            btnText='Click me'
             link={'/projects'}
         />
     ),
     4: (
         <InfoBox
-            text='If you are interest, Contact me..😊'
-            btnText='Here we go!'
+            text='If you want to contact me'
+            btnText='Click me'
             link={'/contacts'}
         />
+    ),
+    5: (
+        <div className='flex sm:text-lg sm:leading-snug text-center bg-emerald-600 rounded-lg shadow-xl py-3 px-6 text-white mx-5'>
+            <p>Come on, Let's travel.. </p> 
+            <img src={arrow} alt="arrow" className='w-4 h-4 object-contain self-center'/>
+
+        </div>
     ),
 
 }

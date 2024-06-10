@@ -163,13 +163,13 @@ const Contacts = () => {
 // </div>
 //         </section>
 
-<section className='max-container h-full '>
-            <h1 className='head-text'>
+<section className='lg:mx-40 md:mx-40 sm:mx-20 mx-10 h-full  text-black'>
+            <h1 className='head-text mt-4'>
                 <span className='blue-gradient_text font-semibold drop-shadow'>Contact me</span>
             </h1>
 
-            <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-               <p>
+            <div className='mt-5 flex flex-col gap-3 '>
+               <p className='text-justify text-black'>
                Thank you for visiting my website! I am a passionate software engineer specializing in building robust, scalable applications. Whether you have a project idea, a collaboration opportunity, or just want to connect, I'd love to hear from you. Please feel free to reach out to me through any of the following methods.
                </p>
 
@@ -177,10 +177,10 @@ const Contacts = () => {
 
             
 
-            <hr className='border-slate-200'/>
+            {/* <hr className='border-slate-200'/> */}
 
 
-            <div className="w-full max-w-md mx-auto">
+            <div className="w-full max-w-md mx-auto my-10 py-10 shadow-xl rounded-xl bg-blue-500 text-white">
       <table className="lg:mt-8 table-auto  w-full">
         <tbody>
           <tr>
@@ -194,13 +194,13 @@ const Contacts = () => {
           <tr>
             <td className="px-4 py-2 text-right md:text-left text-sm">Email:</td>
             <td className="px-4 py-2 font-semibold">
-              <a className="underline" href="chamaalidilka@gmail.com">chamaalidilka@</a>
+              <a className="no-underline" href="chamaalidilka@gmail.com">chamaalidilka@gmail.com</a>
             </td>
           </tr>
           <tr>
             <td className="px-4 py-2 text-right md:text-left text-sm">LinkedIn:</td>
             <td className="px-4 py-2 font-semibold">
-              <a className="underline" href="https://www.linkedin.com/in/chamaali-dilka/" target="_blank" rel="noopener noreferrer">
+              <a className="no-underline" href="https://www.linkedin.com/in/chamaali-dilka/" target="_blank" rel="noopener noreferrer">
               Chamaali Dilka
               </a>
             </td>
@@ -208,7 +208,7 @@ const Contacts = () => {
           <tr>
             <td className="px-4 py-2 text-right md:text-left text-sm">Github:</td>
             <td className="px-4 py-2 font-semibold">
-              <a className="underline" href="https://github.com/Chamaali" target="_blank" rel="noopener noreferrer">
+              <a className="no-underline" href="https://github.com/Chamaali" target="_blank" rel="noopener noreferrer">
                 Chamaali
               </a>
             </td>
@@ -248,23 +248,23 @@ const Contacts = () => {
                     </Suspense>
                 </Canvas>
             </div> 
-            <hr className='border-slate-200'/>
+            {/* <hr className='border-slate-200'/> */}
 
             </div>
-            <hr className='border-slate-200'/>
+            {/* <hr className='border-slate-200'/> */}
 
             {/* <CTA/> */}
             </div>
 
             {/* <hr className='border-slate-200'/> */}
 
-            <div className='absolute bottom left-2'>
+            {/* <div className='absolute bottom left-2'>
                 <img src={isPlayingMusic ? soundon : soundoff}
                      alt="music"
                      className='w-7 h-7 cursor-pointer object-contain'
                      onClick={() => setIsPlayingMusic(!isPlayingMusic)}
                 />
-            </div>
+            </div> */}
         </section>
     );
 };

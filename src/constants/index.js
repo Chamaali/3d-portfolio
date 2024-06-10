@@ -21,6 +21,7 @@ import {
   react,
   redux,
   sass,
+  hero,
   shadcn,
   stack,
   tailwindcss,
@@ -179,6 +180,23 @@ export const experiences = [
     date: "2009 - 2017",
     points: ["Janadhipathi Balika Vidyalaya", "Galle, Sri Lanka"],
   },
+];
+
+export const publications = [
+    {
+        id:1,
+        title: "Revolutionizing Tea Quality Measurement Using Multi Method Approach: An Innovative Mobile Application Approach",
+        authors: "Dilka H. W. C., Ilangasinghe I. M. S. C., Samaraweera J. D C., Pamoda G. H. M., Wasalthilaka W. V. S. K, and Wickramasooriya P. M. T. A.",
+        year:"2024",
+        keywords: "machine learning, mobile application, multi method approach, tea, tea quality",
+    },
+    {
+        id:2,
+        title: "Design and Development of Unique Playable Farming App for Link Famers and Dwellers",
+        authors: "Edirisinhhe E. A. S. K. S., Samarakon H. M. V .M. B., Dilka H. W. C., Weerakon W. M. K. C.",
+        year:"2024",
+        keywords: "askdfa, aaaa, bbbb, cccc, dddd",
+    },
 ];
 
 // export const education = [

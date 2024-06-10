@@ -5,8 +5,8 @@ import {CTA} from "../components/CTA.jsx";
 
 const Projects = () => {
     return (
-        <section className='max-container h-full'>
-            <h1 className='head-text'>
+        <section className='lg:mx-40 md:mx-40 sm:mx-20 mx-10 h-full'>
+            <h1 className='head-text mt-4'>
                 My <span className='blue-gradient_text font-semibold drop-shadow'>Projects</span>
             </h1>
 

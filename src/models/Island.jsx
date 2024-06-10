@@ -134,7 +134,7 @@ export const Island = ({
                     setCurrentStage(1);
                     break;
                 default:
-                    setCurrentStage(null);
+                    setCurrentStage(5);
             }
         }
     })

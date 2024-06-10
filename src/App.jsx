@@ -1,19 +1,23 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import {About, Contacts, Home, Projects} from "./pages/index.js";
+import NavigationBar from "./components/NavigationBar.jsx";
+import {About, Contacts, Gallery, Home, Projects  } from "./pages/index.js";
 
 
 function App() {
 
     return (
-        <main className='bg-slate-300/20 w-full h-full'>
-            <BrowserRouter>
-                <Navbar/>
-                <Routes>
+        <main className='bg-white w-full h-full '>
+            <BrowserRouter className="">
+    
+            <NavigationBar  />
+
+         
+                <Routes className="">
                     <Route path={'/'} element={<Home/>}/>
                     <Route path={'/about'} element={<About/>}/>
                     <Route path={'/projects'} element={<Projects/>}/>
                     <Route path={'/contacts'} element={<Contacts/>}/>
+                    <Route path={'/gallery'} element={<Gallery />}/>
                 </Routes>
             </BrowserRouter>
         </main>

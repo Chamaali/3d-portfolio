@@ -66,7 +66,7 @@ const Home = () => {
    
     return (
         <section className='w-full h-screen relative '>
-            <div className='absolute top-28 left-0 right-0 z-10 flex-center'>
+            <div className='absolute md:top-28 top-20 left-0 right-0 z-10 flex-center'>
                 {currentStage && <HomeInfo currentStage={currentStage}/>}
             </div>
 

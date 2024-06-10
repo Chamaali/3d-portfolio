@@ -27,8 +27,8 @@ const About = () => {
 
 
     return (
-        <section className='max-container h-full'>
-            <h1 className='head-text'>
+        <section className='lg:mx-40 md:mx-40 sm:mx-20 mx-10 h-full'>
+            <h1 className='head-text mt-6'>
                 Hello, I&apos;m <span className='blue-gradient_text font-semibold drop-shadow'>Chamaali Dilka</span>
             </h1>
 
@@ -54,7 +54,7 @@ const About = () => {
 
                                  }}
                         >
-                            <div className='block-container w-10 h-10'>
+                            <div className=' block-contain w-10 h-10'>
                                 <div className='btn-back rounded-xl'/>
                                 <div className='btn-front rounded-xl flex-center'>
                                     <img className='w-1/2 h-1/2 object-contain'
@@ -71,7 +71,7 @@ const About = () => {
 
 
 
-            <div className='py-16'>
+            <div className='py-8'>
                 <h3 className='subhead-text'>Experience and Education</h3>
 
                 {/* <div className='mt-5 flex flex-col gap-3 text-slate-500'>
@@ -140,13 +140,13 @@ const About = () => {
                 </div> */}
 
 
-<div className='absolute bottom left-2'>
+{/* <div className='absolute bottom left-2'>
                 <img src={isPlayingMusic ? soundon : soundoff}
                      alt="music"
                      className='w-7 h-7 cursor-pointer object-contain'
                      onClick={() => setIsPlayingMusic(!isPlayingMusic)}
                 />
-            </div>
+            </div> */}
         </section>
     );
 };
