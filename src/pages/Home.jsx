@@ -81,7 +81,7 @@ const Home = () => {
                                          groundColor="#000000"
                                          intensity={1}
                         />
-                        <Bird/>
+                        {/* <Bird/> */}
                         <Sky
                             islandSpeedValue={islandSpeedValue}
                         />
@@ -107,7 +107,10 @@ const Home = () => {
                     </Suspense>
                 </Canvas>
 
-            <div className='absolute bottom-2 left-2'>
+                <hr className='border-slate-200'/>
+
+
+            <div className='absolute bottom-3 left-2'>
                 <img src={isPlayingMusic ? soundon : soundoff}
                      alt="music"
                      className='w-7 h-7 cursor-pointer object-contain'

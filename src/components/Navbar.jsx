@@ -3,9 +3,10 @@ import {NavLink} from "react-router-dom";
 const Navbar = () => {
     return (
         <header className='header'>
-            <NavLink to={'/'} className='w-20 
-            flex-center '>
-               <img src="/src/assets/icons/bird.png"/>
+            <NavLink to={'/'} className='w-10 h-10 rounded-lg bg-white
+            flex-center font-bold shadow-md'>
+                {/* <p className='blue-gradient_text'>Hi!</p> */}
+                <p className="text-xl"><span className='heart-eyes'>😃</span></p>
             </NavLink>
            <nav className='flex text-sm lg:text-lg gap-7 font-medium'>
                <NavLink to={'/about'} className={({isActive}) => isActive? 'blue-gradient_text': 'text-black'}>

@@ -1,11 +1,31 @@
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import {Suspense, useEffect, useRef, useState} from 'react';
+import sakura from '../assets/sakura.mp3'
+import {soundoff, soundon} from "../assets/icons/index.js";
 
 import {skills, experiences} from '../constants'
 import {CTA} from "../components/CTA.jsx";
 import {Tooltip} from "@material-tailwind/react";
 
 const About = () => {
+    const audioRef = useRef(new Audio(sakura))
+
+    audioRef.current.volume = 0.4
+    audioRef.current.loop = true
+    const [isPlayingMusic, setIsPlayingMusic] = useState(false)
+
+    useEffect(() => {
+        if(isPlayingMusic){
+            audioRef.current.play()
+        }
+
+        return () => {
+            audioRef.current.pause()
+        }
+    }, [isPlayingMusic]);
+
+
     return (
         <section className='max-container h-full'>
             <h1 className='head-text'>
@@ -116,6 +136,15 @@ const About = () => {
                 <h3 className='subhead-text'>Achievements, Awards and Certification</h3>
                 
                 </div> */}
+
+
+<div className='absolute bottom left-2'>
+                <img src={isPlayingMusic ? soundon : soundoff}
+                     alt="music"
+                     className='w-7 h-7 cursor-pointer object-contain'
+                     onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+                />
+            </div>
         </section>
     );
 };

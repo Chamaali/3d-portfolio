@@ -1,4 +1,6 @@
-import {Suspense, useState} from "react";
+
+import {Suspense, useEffect, useRef, useState} from 'react';
+
 import {useForm} from "react-hook-form";
 import * as emailjs from "@emailjs/browser";
 import {Canvas} from "@react-three/fiber";
@@ -8,10 +10,17 @@ import useAlert from "../hooks/useAlert.js";
 import Alert from "../components/Alert.jsx";
 import Bird from "../models/Bird.jsx";
 
+import sakura from '../assets/sakura.mp3'
+import {soundoff, soundon} from "../assets/icons/index.js";
+
 const Contacts = () => {
+
+    const audioRef = useRef(new Audio(sakura))
+    audioRef.current.volume = 0.4
+    audioRef.current.loop = true
     const {register, handleSubmit,formState: { errors }, reset} = useForm()
     const [isLoading, setIsLoading] = useState(false)
-    const [currentAnimation, setCurrentAnimation] = useState('idle')
+    const [currentAnimation, setCurrentAnimation] = useState('hit')
 
     const {alert, hideAlert, showAlert} = useAlert()
 
@@ -25,7 +34,7 @@ const Contacts = () => {
         } else if(window.innerWidth < 768 && window.innerWidth > 430){
             screenScale = [0.8, 0.8, 0.8]
             screenPosition = [1, 0.4, 0]
-            rotation = [12.629, -0.8, 0]
+            rotation = [12.189, 1.3, 0.2]
         }
 
         return [screenScale, screenPosition, rotation]
@@ -73,6 +82,17 @@ const Contacts = () => {
         })
     }
 
+    const [isPlayingMusic, setIsPlayingMusic] = useState(false)
+
+    useEffect(() => {
+        if(isPlayingMusic){
+            audioRef.current.play()
+        }
+
+        return () => {
+            audioRef.current.pause()
+        }
+    }, [isPlayingMusic]);
     return (
 //         <section className='relative lg:flex-row  max-container h-screen '>
             
@@ -228,9 +248,22 @@ const Contacts = () => {
                     </Suspense>
                 </Canvas>
             </div> 
+            <hr className='border-slate-200'/>
+
             </div>
+            <hr className='border-slate-200'/>
 
             {/* <CTA/> */}
+            </div>
+
+            {/* <hr className='border-slate-200'/> */}
+
+            <div className='absolute bottom left-2'>
+                <img src={isPlayingMusic ? soundon : soundoff}
+                     alt="music"
+                     className='w-7 h-7 cursor-pointer object-contain'
+                     onClick={() => setIsPlayingMusic(!isPlayingMusic)}
+                />
             </div>
         </section>
     );

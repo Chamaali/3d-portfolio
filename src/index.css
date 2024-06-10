@@ -206,3 +206,16 @@ body:has(.card[data-color="green"]:hover) {
   50% { transform: rotate(10.0deg) }
 }
 
+.heart-eyes {
+    animation-name: heart-eyes-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    display: inline-block;
+  }
+  
+  @keyframes heart-eyes-animation {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
