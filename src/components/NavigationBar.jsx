@@ -10,10 +10,10 @@ const NavigationBar = () => {
   };
 
   return (
-    <header className="bg-white  sticky top-0 z-50">
+    <header className="bg-white shadow-xl  sticky top-0 z-50">
       <nav className="">
         
-            <div className="shadow-xl flex items-center justify-between py-1         px-6">
+            <div className="flex items-center justify-between py-3  lg:mx-80 md:mx-40 sm:mx-20 mx-10">
             <div className="flex items-center">
               <a href="/">
                 <img src={birdIcon} alt="Bird Icon" width={60} />
