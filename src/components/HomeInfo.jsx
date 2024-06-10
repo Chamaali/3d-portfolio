@@ -21,7 +21,7 @@ const InfoBox = ({text, link, btnText}) => (
 const renderContent = {
     1: (
         <InfoBox
-            text='Let me tell you about myself..'
+            text='Hi!, I&apos;m Chamaali Dilka. I&apos;m a Software Engineer. Do you want to know more..'
             btnText='Click me'
             link={'/about'}
         />
