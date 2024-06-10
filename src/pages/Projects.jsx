@@ -27,7 +27,7 @@ const Projects = () => {
                             <Link to={project.link}
                                   target='_blank'
                                   rel='noopener noreferrer'
-                                  className='btn-front rounded-xl flex-center'
+                                  className='btn-front rounded-lg flex-center shadow-md'
                             >
                                 <img src={project.iconUrl}
                                      alt={project.name}
@@ -38,24 +38,24 @@ const Projects = () => {
                         </div>
 
                         <div className='flex flex-col'>
-                            <h4 className='text-2xl font-poppins font-semibold'>
+                            <h4 className='text-xl pt-2 pl-5 font-poppins font-semibold'>
                                 {project.name}
                             </h4>
-                            <p className='mt-2 text-slate-500'>
+                            <p className='mt-2 pl-5 text-slate-500'>
                                 {project.description}
                             </p>
                             <div>
                                 <Link to={project.link}
                                       target='_blank'
                                       rel='noopener noreferrer'
-                                      className='font-semibold text-blue-600'
+                                      className='font-semibold text-blue-600 pl-5'
                                 >
-                                    <div className='mt-2'>
+                                    <div className='mt-2 pl-5'>
                                         Live/GitHub
-                                        <img src={arrow}
+                                        {/* <img src={arrow}
                                              alt="arrow"
                                              className='w-4 h-4 object-contain'
-                                        />
+                                        /> */}
                                     </div>
                                 </Link>
 
