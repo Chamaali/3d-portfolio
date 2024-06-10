@@ -1,146 +1,184 @@
 import {
-    cinema,
-    computer,
-    computeradv,
-    crypto,
-    css,
-    film,
-    git,
-    html,
-    javascript,
-    jest,
-    nextjs,
-    react,
-    redux,
-    sass,
-    shadcn,
-    stack,
-    tailwindcss,
-    threejs,
-    typescript,
-    webpack
+  cinema,
+  computer,
+  computeradv,
+  crypto,
+  css,
+  film,
+  git,
+  html,
+  javascript,
+  jest,
+  nextjs,
+  python,
+  csharp,
+  c,
+  cplus,
+  docker,
+  java,
+  php,
+  bootstrap,
+  react,
+  redux,
+  sass,
+  shadcn,
+  stack,
+  tailwindcss,
+  threejs,
+  typescript,
+  webpack,
 } from "../assets/icons";
 
-
 export const skills = [
-    {
-        imageUrl: html,
-        name: "HTML",
-        type: "Frontend",
-    },
-    {
-        imageUrl: css,
-        name: "CSS",
-        type: "Frontend",
-    },
-    {
-        imageUrl: javascript,
-        name: "JavaScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: react,
-        name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "Frontend",
-    },
-    {
-        imageUrl: git,
-        name: "Git",
-        type: "Version Control",
-    },
-    {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
-        type: "Frontend",
-    },
-    
-
-
+  {
+    imageUrl: html,
+    name: "HTML",
+    type: "Frontend",
+  },
+  {
+    imageUrl: css,
+    name: "CSS",
+    type: "Frontend",
+  },
+  {
+    imageUrl: javascript,
+    name: "JavaScript",
+    type: "Frontend",
+  },
+  {
+    imageUrl: react,
+    name: "React",
+    type: "Frontend",
+  },
+  {
+    imageUrl: typescript,
+    name: "TypeScript",
+    type: "Frontend",
+  },
+  {
+    imageUrl: redux,
+    name: "Redux",
+    type: "Frontend",
+  },
+  {
+    imageUrl: git,
+    name: "Git",
+    type: "Version Control",
+  },
+  {
+    imageUrl: nextjs,
+    name: "Next.js",
+    type: "Frontend",
+  },
+  {
+    imageUrl: tailwindcss,
+    name: "Tailwind CSS",
+    type: "Frontend",
+  },
+  {
+    imageUrl: python,
+    name: "Python",
+    type: "Frontend",
+  },
+  {
+    imageUrl: c,
+    name: "C",
+    type: "Frontend",
+  },
+  {
+    imageUrl: csharp,
+    name: "C#",
+    type: "Frontend",
+  },
+  {
+    imageUrl: cplus,
+    name: "C++",
+    type: "Frontend",
+  },
+  {
+    imageUrl: docker,
+    name: "Docker",
+    type: "Frontend",
+  },
+  {
+    imageUrl: java,
+    name: "Java",
+    type: "Frontend",
+  },
+  {
+    imageUrl: javascript,
+    name: "JavaScript",
+    type: "Frontend",
+  },
+  {
+    imageUrl: php,
+    name: "PHP",
+    type: "Frontend",
+  },
+  {
+    imageUrl: react,
+    name: "React JS/React Native",
+    type: "Frontend",
+  },
+  {
+    imageUrl: bootstrap,
+    name: "Bootstrap",
+    type: "Frontend",
+  },
 ];
 
 export const experiences = [
-    {
-        title: "Associate Production",
-        company_name: "Innodata Lanka PVT (LTD)",
-        icon: crypto,
-        iconBg: "#fbc3bc",
-        date: "2020 - 2021",
-        points: [
-            "Information Technology Company",
-            "Galle, Sri Lanka",
-        ],
-    },
-    {
-        title: "Production Associate",
-        icon: crypto,
-        iconBg: "#fbc3bc",
-        date: "2023 - 2024",
-        points: ['Software Company',
-            'Christchurch, New Zealand',
-        ],
-    },
-    {
-        title: "BSc(Hons) in Computing and Information Systems",
-        icon: computeradv,
-        iconBg: "#accbe1",
-        date: "2020 - 2025",
-        points: ['Sabaragamuwa University of Sri Lanka',
-            'Belihuloya, Sri Lanka',
-        ],
-    },
-    {
-        title: "Diploma in Information & Communication Technology and System Development (ICT & SD)",
-        icon: computeradv,
-        iconBg: "#accbe1",
-        date: "2019 - 2020",
-        points: ['IDM Southern Campus',
-            'Galle, Sri Lanka',
-        ],
-    },
-    {
-        title: "Certificate in Information & Communication Technology",
-        icon: computeradv,
-        iconBg: "#accbe1",
-        date: "2008 - 2010",
-        points: ['E Base Lanka International',
-            'Yakkalamulla, Sri Lanka',
-        ],
-    },
-    {
-        title: "Professional Certificate in Marketing",
-        icon: computeradv,
-        iconBg: "#accbe1",
-        date: "2023 - 2024",
-        points: ['Sri Lanka Institute of Marketing (SLIM)',
-            'Matara, Sri Lanka',
-        ],
-    },
-    {
-        title: "High School Education",
-        icon: computeradv,
-        iconBg: "#accbe1",
-        date: "2009 - 2017",
-        points: ['Janadhipathi Balika Vidyalaya',
-            'Galle, Sri Lanka',
-        ],
-    },
-
-
+  {
+    title: "Associate Production",
+    company_name: "Innodata Lanka PVT (LTD)",
+    icon: crypto,
+    iconBg: "#fbc3bc",
+    date: "2020 - 2021",
+    points: ["Information Technology Company", "Galle, Sri Lanka"],
+  },
+  {
+    title: "Production Associate",
+    icon: crypto,
+    iconBg: "#fbc3bc",
+    date: "2023 - 2024",
+    points: ["Software Company", "Christchurch, New Zealand"],
+  },
+  {
+    title: "BSc(Hons) in Computing and Information Systems",
+    icon: computeradv,
+    iconBg: "#accbe1",
+    date: "2020 - 2025",
+    points: ["Sabaragamuwa University of Sri Lanka", "Belihuloya, Sri Lanka"],
+  },
+  {
+    title:
+      "Diploma in Information & Communication Technology and System Development (ICT & SD)",
+    icon: computeradv,
+    iconBg: "#accbe1",
+    date: "2019 - 2020",
+    points: ["IDM Southern Campus", "Galle, Sri Lanka"],
+  },
+  {
+    title: "Certificate in Information & Communication Technology",
+    icon: computeradv,
+    iconBg: "#accbe1",
+    date: "2008 - 2010",
+    points: ["E Base Lanka International", "Yakkalamulla, Sri Lanka"],
+  },
+  {
+    title: "Professional Certificate in Marketing",
+    icon: computeradv,
+    iconBg: "#accbe1",
+    date: "2023 - 2024",
+    points: ["Sri Lanka Institute of Marketing (SLIM)", "Matara, Sri Lanka"],
+  },
+  {
+    title: "High School Education",
+    icon: computeradv,
+    iconBg: "#accbe1",
+    date: "2009 - 2017",
+    points: ["Janadhipathi Balika Vidyalaya", "Galle, Sri Lanka"],
+  },
 ];
 
 // export const education = [
@@ -193,59 +231,61 @@ export const experiences = [
 // ];
 
 export const projects = [
-    {
-        iconUrl: nextjs,
-        theme: 'btn-back-pink',
-        name: 'Lakshmi Ayurweda',
-        description: ['This is a website for a Ayurvedic clinic. I\'m developing both frontend and backend. There is an admin panel to update data by the admin.'],
-        link: 'https://github.com/Chamaali/Lakshmi-Ayurweda',
-    },
-    {
-        iconUrl: film,
-        theme: 'btn-back-blue',
-        name: 'Film review app with voice control',
-        description: 'Soon to be.',
-        link: 'https://github.com/Chamaali/sentiment-analysis-project',
-    },
-    {
-        iconUrl: crypto,
-        theme: 'btn-back-black',
-        name: 'Crypto app for creating NFT',
-        description: 'Soon to be.',
-        link: 'https://github.com/orgs/Tea-Test/repositories',
-    },
-    {
-        iconUrl: computeradv,
-        theme: 'btn-back-yellow',
-        name: 'Advanced frontend development',
-        description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
-            'a basic UI kit, FSD architecture and many more.',
-        link: 'https://github.com/Chamaali/Star_Mobile',
-    },
-    {
-        iconUrl: computeradv,
-        theme: 'btn-back-yellow',
-        name: 'Advanced frontend development',
-        description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
-            'a basic UI kit, FSD architecture and many more.',
-        link: 'https://duelo.lk/',
-    },
-    ,
-    {
-        iconUrl: computeradv,
-        theme: 'btn-back-yellow',
-        name: 'Advanced frontend development',
-        description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
-            'a basic UI kit, FSD architecture and many more.',
-        link: 'https://ieee.sab.ac.lk/',
-    },
-    ,
-    {
-        iconUrl: computeradv,
-        theme: 'btn-back-yellow',
-        name: 'Advanced frontend development',
-        description: 'This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I\'ve created' +
-            'a basic UI kit, FSD architecture and many more.',
-        link: 'hhttps://github.com/Chamaali/Speedy-Loan',
-    }
+  {
+    iconUrl: nextjs,
+    theme: "btn-back-white",
+    name: "Lakshmi Ayurweda",
+    description:
+      "This is a website for a Ayurvedic clinic. I'm developing both frontend and backend. There is an admin panel to update data by the admin.",
+    link: "https://github.com/Chamaali/Lakshmi-Ayurweda",
+  },
+  {
+    iconUrl: python,
+    theme: "btn-back-white",
+    name: "Sentiment Analysis System",
+    description:
+      "This is a machine learning model, which was creted using python. This model is not totally accurate, but it can be used for a basic sentiment analysis.",
+    link: "https://github.com/Chamaali/sentiment-analysis-project",
+  },
+  {
+    iconUrl: react,
+    theme: "btn-back-white",
+    name: "Tea Test - Mobile Application",
+    description:
+      "This is a mobile application for Tea Test. It was developed both frontend and backend. There is a machine learning model for identify Tea Grades.",
+    link: "https://github.com/orgs/Tea-Test/repositories",
+  },
+  {
+    iconUrl: react,
+    theme: "btn-back-white",
+    name: "Star Mobile - Web Application",
+    description:
+      "This is a web application for phone shop. This application is being developed by a team of developers",
+    link: "https://github.com/Chamaali/Star_Mobile",
+  },
+  {
+    iconUrl: react,
+    theme: "btn-back-white",
+    name: "Duelo Web Site",
+    description: "This is official website for Duelo Robotic Competition.",
+    link: "https://duelo.lk/",
+  },
+  ,
+  {
+    iconUrl: react,
+    theme: "btn-back-white",
+    name: " IEEE Student Branch of SUSL",
+    description:
+      "This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I've created" +
+      "a basic UI kit, FSD architecture and many more.",
+    link: "https://ieee.sab.ac.lk/",
+  },
+  ,
+  {
+    iconUrl: react,
+    theme: "btn-back-white",
+    name: "Speedy Loan - Web Application",
+    description: "This web application for request and approve loan online.",
+    link: "https://github.com/Chamaali/Speedy-Loan",
+  },
 ];

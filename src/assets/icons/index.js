@@ -24,8 +24,26 @@ import computeradv from './computer-svgrepo-com_adv.svg'
 import crypto from './cryptoket.svg'
 import stack from './stack.svg'
 import film from './film-svgrepo-com.svg'
+import bootstrap from './bootstrap.png'
+import python from './python.png'
+import csharp from './csharp.png'
+import cplus from './cplus.png'
+import c from './c.png'
+import docker from './docker.png'
+import java from './java.png'
+import php from './php.png'
+import books from './books.png'
 
 export {
+    bootstrap,
+    python,
+    csharp,
+    cplus,
+    c,
+    docker,
+    java,
+    php,
+    books,
     css,
     git,
     github,
