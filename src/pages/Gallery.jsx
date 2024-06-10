@@ -31,7 +31,7 @@ const Gallery = () => {
   }, [isPlayingMusic]);
 
   return (
-    <section className="lg:mx-40 md:mx-40 sm:mx-20 mx-10 h-full">
+    <section className="lg:mx-80 md:mx-40 sm:mx-20 mx-10 h-full">
       <h1 className="head-text my-6">
         My{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
@@ -39,8 +39,20 @@ const Gallery = () => {
         </span>
       </h1>
 
+      <div className="mt-5 flex flex-col gap-3 text-slate-500">
+        <p className="text-justify text-lg">
+          Welcome to the Gallery, a curated space showcasing my collection of
+          Research, Achievements, and Memories. Each piece represents
+          significant milestones and moments I've gathered over time. I'm
+          delighted to share these with you, offering a glimpse into my journey
+          and accomplishments. I invite you to explore and learn more about each
+          item, and I hope you find them as inspiring and meaningful as they are
+          to me.
+        </p>
+      </div>
+
       <div>
-        <div className="flex mt-8">
+        <div className="flex mt-10   mb-6">
           <div className="block-container shadow-md rounded-xl w-12 h-12 bg-white">
             <div className="grid place-items-center bg-white btn-back rounded-xl ">
               <div className="btn-front rounded-lg flex-center shadow">
@@ -59,10 +71,10 @@ const Gallery = () => {
         <div className="grid md:grid-cols-2  sm:grid-cols-2 xs:grid-cols-1 grid-cols-1  gap-5">
           {publications.map((publication) => (
             <div
-              className=" rounded-lg shadow-2xl px-4 py-2 text-justify"
+              className=" rounded-lg shadow-xl px-4 py-2 text-justify border border-slate-200"
               key={publication.id}
             >
-              <div className="px-2 py-4">
+              <div className="px-2 pb-3 pt-5 font-serif ">
                 <p className="font-bold text-md pb-2">{publication.title}</p>
                 <p className="pb-2 text-sm">{publication.authors}</p>
                 <p className="pb-2 italic font-semibold text-sm">

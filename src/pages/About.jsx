@@ -27,21 +27,24 @@ const About = () => {
 
 
     return (
-        <section className='lg:mx-40 md:mx-40 sm:mx-20 mx-10 h-full'>
+        <section className='lg:mx-80 md:mx-40 sm:mx-20 mx-10 h-full'>
             <h1 className='head-text mt-6'>
                 Hello, I&apos;m <span className='blue-gradient_text font-semibold drop-shadow'>Chamaali Dilka</span>
             </h1>
 
-            <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-                <p>
+            <div className='mt-5 mb-5 flex flex-col gap-3 text-slate-500'>
+                <p className='text-justify text-lg'>
                 Enthusiastic undergraduate pursuing a degree in Computing and Information Systems, specializing in Full-stack Web Development and Android Development, with 5+ years of experience in web development. I am a self-motivated and self learner. Eager to leverage my skills and knowledge in a Software Engineering internship role to contribute effectively to innovative projects and provide an effective service. 
                 </p>
             </div>
 
-            <div className='py-10 flex flex-col'>
-                <h3 className='subhead-text'>My skills</h3>
+            <hr className='border-slate-200'/>
 
-                <div className='mt-9 flex flex-wrap justify-evenly gap-5'>
+
+            <div className='py-5 flex flex-col'>
+                <h3 className='subhead-text pt-5 pb-3'>My skills</h3>
+
+                <div className='mt-9 flex flex-wrap justify-evenly gap-20'>
                     {skills.map((skill) => (
                         <Tooltip key={skill.imageUrl}
                                  content={skill.name}
@@ -54,10 +57,10 @@ const About = () => {
 
                                  }}
                         >
-                            <div className=' block-contain w-10 h-10'>
+                            <div className=' block-contain w-12 h-12'>
                                 <div className='btn-back rounded-xl'/>
                                 <div className='btn-front rounded-xl flex-center'>
-                                    <img className='w-1/2 h-1/2 object-contain'
+                                    <img className='w-2/3 h-2/3 object-contain'
                                          src={skill.imageUrl} alt={skill.name}/>
                                 </div>
                             </div>
@@ -71,8 +74,8 @@ const About = () => {
 
 
 
-            <div className='py-8'>
-                <h3 className='subhead-text'>Experience and Education</h3>
+            <div className='py-5'>
+                <h3 className='subhead-text pt-3' >Experience and Education</h3>
 
                 {/* <div className='mt-5 flex flex-col gap-3 text-slate-500'>
                     <p>

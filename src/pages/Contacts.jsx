@@ -1,272 +1,235 @@
+import { Suspense, useEffect, useRef, useState } from "react";
 
-import {Suspense, useEffect, useRef, useState} from 'react';
-
-import {useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import * as emailjs from "@emailjs/browser";
-import {Canvas} from "@react-three/fiber";
-import {Fox} from "../models/Fox.jsx";
+import { Canvas } from "@react-three/fiber";
+import { Fox } from "../models/Fox.jsx";
 import Loader from "../components/Loader.jsx";
 import useAlert from "../hooks/useAlert.js";
 import Alert from "../components/Alert.jsx";
 import Bird from "../models/Bird.jsx";
 
-import sakura from '../assets/sakura.mp3'
-import {soundoff, soundon} from "../assets/icons/index.js";
+import sakura from "../assets/sakura.mp3";
+import { soundoff, soundon } from "../assets/icons/index.js";
 
 const Contacts = () => {
+  const audioRef = useRef(new Audio(sakura));
+  audioRef.current.volume = 0.4;
+  audioRef.current.loop = true;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+  const [isLoading, setIsLoading] = useState(false);
+  const [currentAnimation, setCurrentAnimation] = useState("hit");
 
-    const audioRef = useRef(new Audio(sakura))
-    audioRef.current.volume = 0.4
-    audioRef.current.loop = true
-    const {register, handleSubmit,formState: { errors }, reset} = useForm()
-    const [isLoading, setIsLoading] = useState(false)
-    const [currentAnimation, setCurrentAnimation] = useState('hit')
+  const { alert, hideAlert, showAlert } = useAlert();
 
-    const {alert, hideAlert, showAlert} = useAlert()
+  const adjustFoxScale = () => {
+    let screenScale = [0.7, 0.7, 0.7];
+    let screenPosition = [0.4, 0.1, 0];
+    let rotation = [12.629, -0.6, 0];
 
-    const adjustFoxScale = () => {
-        let screenScale = [0.7, 0.7, 0.7]
-        let screenPosition = [0.4, 0.1, 0]
-        let rotation = [12.629, -0.6, 0]
-
-        if(window.innerWidth < 430) {
-            screenScale = [0.7, 0.7, 0.7]
-        } else if(window.innerWidth < 768 && window.innerWidth > 430){
-            screenScale = [0.8, 0.8, 0.8]
-            screenPosition = [1, 0.4, 0]
-            rotation = [12.189, 1.3, 0.2]
-        }
-
-        return [screenScale, screenPosition, rotation]
-    }
-    const [screenScale, screenPosition, rotation] = adjustFoxScale()
-
-    const handleFocus = () => {
-        setCurrentAnimation('walk')
-    }
-    const handleBlur = () => {
-        setCurrentAnimation('idle')
-    }
-    const onSubmit = (data) => {
-        setIsLoading(true)
-        setCurrentAnimation('hit')
-        emailjs.send(
-            import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-            import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-            {
-                from_name: data.name,
-                to_name: 'Ivan',
-                from_email: data.email,
-                message: data.message
-            },
-            import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-            ).then(() => {
-                showAlert({
-                    text: 'Message sent!',
-                    type: 'success'
-                })
-                setTimeout(() => {
-                    hideAlert()
-                    setCurrentAnimation('idle')
-                }, 3000)
-
-            setIsLoading(false)
-            reset()
-        }).catch((error) => {
-            showAlert({
-                text: 'Message didn\'t received :( !'
-            })
-            setIsLoading(false)
-            setCurrentAnimation('idle')
-            console.log(error)
-        })
+    if (window.innerWidth < 430) {
+      screenScale = [0.7, 0.7, 0.7];
+    } else if (window.innerWidth < 768 && window.innerWidth > 430) {
+      screenScale = [0.8, 0.8, 0.8];
+      screenPosition = [1, 0.4, 0];
+      rotation = [12.189, 1.3, 0.2];
     }
 
-    const [isPlayingMusic, setIsPlayingMusic] = useState(false)
+    return [screenScale, screenPosition, rotation];
+  };
+  const [screenScale, screenPosition, rotation] = adjustFoxScale();
 
-    useEffect(() => {
-        if(isPlayingMusic){
-            audioRef.current.play()
-        }
+  const handleFocus = () => {
+    setCurrentAnimation("walk");
+  };
+  const handleBlur = () => {
+    setCurrentAnimation("idle");
+  };
+  const onSubmit = (data) => {
+    setIsLoading(true);
+    setCurrentAnimation("hit");
+    emailjs
+      .send(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: data.name,
+          to_name: "Ivan",
+          from_email: data.email,
+          message: data.message,
+        },
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        showAlert({
+          text: "Message sent!",
+          type: "success",
+        });
+        setTimeout(() => {
+          hideAlert();
+          setCurrentAnimation("idle");
+        }, 3000);
 
-        return () => {
-            audioRef.current.pause()
-        }
-    }, [isPlayingMusic]);
-    return (
-//         <section className='relative lg:flex-row  max-container h-screen '>
-            
-// <div className="grid justify-items-stretch  p-8 rounded-xl  bg-white shadow-2xl  font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-// <div>
-//     <h1 className="text-3xl text-center font-medium pb-3">Contact me</h1>
-//     <p className="text-lg">I'm always open to new projects and opportunities.</p>
-    
-//     <div className="grid  gap-4">
-//     <table className=" mt-8 table-auto place-self-center">
-        
-//         <tbody>
-//           <tr>
-//             <td className="px-4 py-2  text-right text-lg">Phone:</td>
-//             <td className="px-4 py-2 font-semibold  text-xl">+94 76 600 81</td>
-//           </tr>
-//           <tr>
-//             <td className="px-4 py-2  text-right text-lg">Whatsapp:</td>
-//             <td className="px-4 py-2 font-semibold  text-xl">+94 76 600 81</td>
-//           </tr><tr>
-//             <td className="px-4 py-2  text-right text-lg">Email:</td>
-//             <td className="px-4 py-2 font-semibold  text-xl">chamaalidilka@gmail.com</td>
-//           </tr><tr>
-//             <td className="px-4 py-2  text-right text-lg">LinkedIn:</td>
-//             <td className="px-4 py-2 font-semibold  text-xl">https://www.linkedin.com/in/chamaali-dilka/</td>
-//           </tr><tr>
-//             <td className="px-4 py-2  text-right text-lg">Github:</td>
-//             <td className="px-4 py-2 font-semibold  text-xl">Chamaali</td>
-//           </tr>
-//         </tbody>
-//       </table>
-//     </div>
-// <div className="grid  place-items-end ">
-//       <div className='lg:w-1/2 lg:h-auto md:h-[550px] '>
-//                 <Canvas
-//                     camera={{
-//                         position: [0, 0, 5],
-//                         fov: 75,
-//                         near: 0.1,
-//                         far: 1000,
-//                     }}
-//                 >
-//                     <directionalLight position={[0, 0, 1]} intensity={2.5}/>
-//                     <ambientLight intensity={0.5}/>
+        setIsLoading(false);
+        reset();
+      })
+      .catch((error) => {
+        showAlert({
+          text: "Message didn't received :( !",
+        });
+        setIsLoading(false);
+        setCurrentAnimation("idle");
+        console.log(error);
+      });
+  };
 
-//                     <spotLight
-//                         position={[10, 10, 10]}
-//                         angle={0.15}
-//                         penumbra={1}
-//                         intensity={2}
-//                     />
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
-//                     <Suspense fallback={<Loader/>}>
-//                         <Fox
-//                             currentAnimation={currentAnimation}
-//                             position={screenPosition}
-//                             rotation={rotation}
-//                             scale={screenScale}
-//                         />
-// {/* <Bird/> */}
-//                     </Suspense>
-//                 </Canvas>
-//             </div> 
-//             </div>
-        
-// </div>
+  useEffect(() => {
+    if (isPlayingMusic) {
+      audioRef.current.play();
+    }
 
-// </div>
-//         </section>
+    return () => {
+      audioRef.current.pause();
+    };
+  }, [isPlayingMusic]);
+  return (
+    //
 
-<section className='lg:mx-40 md:mx-40 sm:mx-20 mx-10 h-full  text-black'>
-            <h1 className='head-text mt-4'>
-                <span className='blue-gradient_text font-semibold drop-shadow'>Contact me</span>
-            </h1>
+    <section className="lg:mx-80 md:mx-40 sm:mx-20 mx-10 h-full  text-black">
+      <h1 className="head-text mt-4 text-black font-semibold drop-shadow ">
+        <span className="blue-gradient_text font-semibold drop-shadow">
+          Contact 
+        </span> me
+      </h1>
 
-            <div className='mt-5 flex flex-col gap-3 '>
-               <p className='text-justify text-black'>
-               Thank you for visiting my website! I am a passionate software engineer specializing in building robust, scalable applications. Whether you have a project idea, a collaboration opportunity, or just want to connect, I'd love to hear from you. Please feel free to reach out to me through any of the following methods.
-               </p>
+      <div className="mt-5 flex flex-col gap-3 ">
+        <p className="text-justify text-slate-500 pb-5">
+          Thank you for visiting my website! I am a passionate software engineer
+          specializing in building robust, scalable applications. Whether you
+          have a project idea, a collaboration opportunity, or just want to
+          connect, I'd love to hear from you. Please feel free to reach out to
+          me through any of the following methods.
+        </p>
 
-            
+        <hr className="border-slate-200" />
 
-            
+        <div className="w-full max-w-md mx-auto my-5 py-5 shadow-xl rounded-xl bg-blue-500 text-white">
+          <table className=" table-auto  w-full">
+            <tbody>
+              <tr>
+                <td className="px-4 py-2 text-right text-left text-sm">
+                  Phone:
+                </td>
+                <td className="px-4 py-2 font-medium font-mono md:text-xl">+94763560081</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 text-right text-left text-sm">
+                  WhatsApp:
+                </td>
+                <td className="px-4 py-2 font-medium font-mono md:text-xl">+94763560081</td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 text-right text-left text-sm">
+                  Email:
+                </td>
+                <td className="px-4 py-2 font-medium font-mono md:text-xl">
+                  <a className="no-underline" href="chamaalidilka@gmail.com">
+                    chamaalidilka@gmail.com
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 text-right text-left text-sm">
+                  LinkedIn:
+                </td>
+                <td className="px-4 py-2 font-medium font-mono md:text-xl">
+                  <a
+                    className="no-underline"
+                    href="https://www.linkedin.com/in/chamaali-dilka/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Chamaali Dilka
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td className="px-4 py-2 text-right text-left text-sm ">
+                  Github:
+                </td>
+                <td className="px-4 py-2 font-medium font-mono md:text-xl">
+                  <a
+                    className="no-underline"
+                    href="https://github.com/Chamaali"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Chamaali
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {/* <div className="grid  place-items-end ">
+           <div className="lg:w-1/2 lg:h-auto md:h-[550px] ">
+            <Canvas
+              camera={{
+                position: [0, 0, 5],
+                fov: 75,
+                near: 0.1,
+                far: 1000,
+              }}
+            >
+              <directionalLight position={[0, 0, 1]} intensity={2.5} />
+              <ambientLight intensity={0.5} />
 
-            {/* <hr className='border-slate-200'/> */}
+              <spotLight
+                position={[10, 10, 10]}
+                angle={0.15}
+                penumbra={1}
+                intensity={2}
+              />
+
+              <Suspense fallback={<Loader />}>
+                <Fox
+                  currentAnimation={currentAnimation}
+                  position={screenPosition}
+                  rotation={rotation}
+                  scale={screenScale}
+                />
+                <Bird/>
+              </Suspense>
+            </Canvas>
+          </div>
+           <hr className='border-slate-200'/> 
+        </div>  
 
 
-            <div className="w-full max-w-md mx-auto my-10 py-10 shadow-xl rounded-xl bg-blue-500 text-white">
-      <table className="lg:mt-8 table-auto  w-full">
-        <tbody>
-          <tr>
-            <td className="px-4 py-2 text-right md:text-left text-sm">Phone:</td>
-            <td className="px-4 py-2 font-semibold">+94763560081</td>
-          </tr>
-          <tr>
-            <td className="px-4 py-2 text-right md:text-left text-sm">WhatsApp:</td>
-            <td className="px-4 py-2 font-semibold">+94763560081</td>
-          </tr>
-          <tr>
-            <td className="px-4 py-2 text-right md:text-left text-sm">Email:</td>
-            <td className="px-4 py-2 font-semibold">
-              <a className="no-underline" href="chamaalidilka@gmail.com">chamaalidilka@gmail.com</a>
-            </td>
-          </tr>
-          <tr>
-            <td className="px-4 py-2 text-right md:text-left text-sm">LinkedIn:</td>
-            <td className="px-4 py-2 font-semibold">
-              <a className="no-underline" href="https://www.linkedin.com/in/chamaali-dilka/" target="_blank" rel="noopener noreferrer">
-              Chamaali Dilka
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td className="px-4 py-2 text-right md:text-left text-sm">Github:</td>
-            <td className="px-4 py-2 font-semibold">
-              <a className="no-underline" href="https://github.com/Chamaali" target="_blank" rel="noopener noreferrer">
-                Chamaali
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
- <div className="grid  place-items-end ">
-       <div className='lg:w-1/2 lg:h-auto md:h-[550px] '>
-                 
-<Canvas
-                    camera={{
-                        position: [0, 0, 5],
-                        fov: 75,
-                        near: 0.1,
-                        far: 1000,
-                    }}
-                >
-                    <directionalLight position={[0, 0, 1]} intensity={2.5}/>
-                    <ambientLight intensity={0.5}/>
+        <hr className='border-slate-200'/>
 
-                    <spotLight
-                        position={[10, 10, 10]}
-                        angle={0.15}
-                        penumbra={1}
-                        intensity={2}
-                    />
+        <CTA/>
+      </div>
 
-                    <Suspense fallback={<Loader/>}>
-                        <Fox
-                            currentAnimation={currentAnimation}
-                            position={screenPosition}
-                            rotation={rotation}
-                            scale={screenScale}
-                        />
-{/* <Bird/> */}
-                    </Suspense>
-                </Canvas>
-            </div> 
-            {/* <hr className='border-slate-200'/> */}
+      <hr className='border-slate-200'/>
 
-            </div>
-            {/* <hr className='border-slate-200'/> */}
-
-            {/* <CTA/> */}
-            </div>
-
-            {/* <hr className='border-slate-200'/> */}
-
-            {/* <div className='absolute bottom left-2'>
+      <div className='absolute bottom left-2'>
                 <img src={isPlayingMusic ? soundon : soundoff}
                      alt="music"
                      className='w-7 h-7 cursor-pointer object-contain'
                      onClick={() => setIsPlayingMusic(!isPlayingMusic)}
                 />
             </div> */}
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Contacts;

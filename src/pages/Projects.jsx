@@ -5,13 +5,13 @@ import {CTA} from "../components/CTA.jsx";
 
 const Projects = () => {
     return (
-        <section className='lg:mx-40 md:mx-40 sm:mx-20 mx-10 h-full'>
+        <section className='lg:mx-80 md:mx-40 sm:mx-20 mx-10 h-full'>
             <h1 className='head-text mt-4'>
                 My <span className='blue-gradient_text font-semibold drop-shadow'>Projects</span>
             </h1>
 
             <div className='mt-5 flex flex-col gap-3 text-slate-500'>
-               <p>
+               <p className="text-justify text-lg">
                    I have always been interested in working with some new technologies and trying my hand
                    at different approaches. I am currently working on 4 projects and as they are ready they will be added to this site.
                </p>
@@ -20,7 +20,7 @@ const Projects = () => {
 
             <div className='flex flex-wrap my-20 gap-16'>
                 {projects.map((project) => (
-                    <div key={project.link} className='lg:w-[400px] w-full gap-20 items-start lg:flex'>
+                    <div key={project.link} className='lg:w-[400px] w-full gap-16 items-start lg:flex'>
                         <div className='block-container w-12 h-12'>
                             <div className={`btn-back rounded-xl ${project.theme}`}/>
 
@@ -41,7 +41,7 @@ const Projects = () => {
                             <h4 className='text-xl pt-2 pl-5 font-poppins font-semibold'>
                                 {project.name}
                             </h4>
-                            <p className='mt-2 pl-5 text-slate-500'>
+                            <p className='mt-2 pl-5 text-slate-500 text-justify'>
                                 {project.description}
                             </p>
                             <div>
