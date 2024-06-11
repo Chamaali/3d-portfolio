@@ -17,7 +17,7 @@ const NavigationBar = () => {
             <div className="flex items-center justify-between py-3  xl:mx-80 md:mx-40 sm:mx-20 mx-10">
             <div className="flex items-center">
               <a href="./">
-                <img src={plane} alt="Bird Icon" width={50} />
+                <img src={plane} alt="Bird Icon" width={60}/>
               </a>
             </div>
             <div className="lg:hidden">
