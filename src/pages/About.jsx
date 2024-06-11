@@ -27,7 +27,7 @@ const About = () => {
 
 
     return (
-        <section className='lg:mx-80 md:mx-40 sm:mx-20 mx-10 h-full'>
+        <section className='xl:mx-80 md:mx-40 sm:mx-20 mx-10 h-full'>
             <h1 className='head-text mt-6'>
                 Hello, I&apos;m <span className='blue-gradient_text font-semibold drop-shadow'>Chamaali Dilka</span>
             </h1>

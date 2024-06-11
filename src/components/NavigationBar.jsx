@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import birdIcon from "/src/assets/icons/bird.png"; 
+import { plane } from "../assets/icons/index.js";
 
 const NavigationBar = () => {
   const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
@@ -13,13 +14,13 @@ const NavigationBar = () => {
     <header className="bg-white shadow-xl  sticky top-0 z-50">
       <nav className="">
         
-            <div className="flex items-center justify-between py-3  lg:mx-80 md:mx-40 sm:mx-20 mx-10">
+            <div className="flex items-center justify-between py-3  xl:mx-80 md:mx-40 sm:mx-20 mx-10">
             <div className="flex items-center">
-              <a href="/">
-                <img src={birdIcon} alt="Bird Icon" width={60} />
+              <a href="./">
+                <img src={plane} alt="Bird Icon" width={50} />
               </a>
             </div>
-            <div className="md:hidden">
+            <div className="lg:hidden">
               <button onClick={toggleOffcanvas} className="text-black">
                 <svg
                   className="w-6 h-6"
@@ -37,9 +38,9 @@ const NavigationBar = () => {
                 </svg>
               </button>
             </div>
-            <div className="hidden md:flex space-x-6 font-semibold">
+            <div className="hidden lg:flex space-x-6 font-semibold">
               <NavLink
-                to="/about"
+                to="./about"
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
                 }
@@ -47,7 +48,7 @@ const NavigationBar = () => {
                 About
               </NavLink>
               <NavLink
-                to="/gallery"
+                to="./gallery"
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
                 }
@@ -55,7 +56,7 @@ const NavigationBar = () => {
                 Gallery
               </NavLink>
               <NavLink
-                to="/projects"
+                to="./projects"
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
                 }
@@ -63,7 +64,7 @@ const NavigationBar = () => {
                 Projects
               </NavLink>
               <NavLink
-                to="/contacts"
+                to="./contacts"
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
                 }
@@ -74,20 +75,20 @@ const NavigationBar = () => {
           </div>
         
         {isOffcanvasOpen && (
-          <div className="md:hidden fixed inset-0 w-1/2 right-0 bg-white justify-self-end z-50 h-fit shadow-xl rounded-es-xl">
+          <div className="lg:hidden fixed inset-0 w-1/2 right-0 top-0 bg-white justify-self-end z-50 h-fit shadow-xl rounded-es-xl">
             <div className="flex items-center justify-between p-6">
 
                 
               <div>
-                <a href="/">
-                  <img src={birdIcon} alt="Bird Icon" width={60} />
+                <a href="./">
+                <img src={plane} alt="Bird Icon" width={50} />
                 </a>
               </div>
               
             </div>
             <nav className="flex flex-col space-y-4 p-6 font-semibold">
               <NavLink
-                to="/about"
+                to="./about"
                 onClick={toggleOffcanvas}
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
@@ -98,7 +99,7 @@ const NavigationBar = () => {
                 About
               </NavLink>
               <NavLink
-                to="/gallery"
+                to="./gallery"
                 onClick={toggleOffcanvas}
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
@@ -107,7 +108,7 @@ const NavigationBar = () => {
                 Gallery
               </NavLink>
               <NavLink
-                to="/projects"
+                to="./projects"
                 onClick={toggleOffcanvas}
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
@@ -116,7 +117,7 @@ const NavigationBar = () => {
                 Projects
               </NavLink>
               <NavLink
-                to="/contacts"
+                to="./contacts"
                 onClick={toggleOffcanvas}
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"

@@ -1,6 +1,5 @@
 import css from './css.svg'
 import git from './git.svg'
-import github from './github.svg'
 import html from './html.svg'
 import javascript from './javascript.svg'
 import nextjs from './nextjs.svg'
@@ -9,7 +8,7 @@ import redux from './redux.svg'
 import sass from './sass.svg'
 import tailwindcss from './tailwindcss.svg'
 import typescript from './typescript.svg'
-import linkedin from './linkedin.svg'
+import linkedin from './linkedin.png'
 import arrow from './arrow.svg'
 import soundon from './sound-on.svg'
 import soundoff from './sound-off-svgrepo-com.svg'
@@ -35,8 +34,15 @@ import php from './php.png'
 import books from './books.png'
 import hero from './../images/hero.jpg'
 import research from './research.png'
+import github from './github.png'
+import gmail from './gmail.png'
+import x from './x.png'
+import plane from './plane.png'
 
 export {
+    plane,
+    x,
+    gmail,
     research,
     bootstrap,
     python,

@@ -8,6 +8,7 @@ import Loader from "../components/Loader.jsx";
 import useAlert from "../hooks/useAlert.js";
 import Alert from "../components/Alert.jsx";
 import Bird from "../models/Bird.jsx";
+import { github, gmail, linkedin, x } from "../assets/icons/index.js";
 
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons/index.js";
@@ -102,11 +103,12 @@ const Contacts = () => {
   return (
     //
 
-    <section className="lg:mx-80 md:mx-40 sm:mx-20 mx-10 h-full  text-black">
+    <section className="xl:mx-80 md:mx-40 sm:mx-20 mx-10 h-full  text-black">
       <h1 className="head-text mt-4 text-black font-semibold drop-shadow ">
         <span className="blue-gradient_text font-semibold drop-shadow">
-          Contact 
-        </span> me
+          Contact
+        </span>{" "}
+        me
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 ">
@@ -120,59 +122,68 @@ const Contacts = () => {
 
         <hr className="border-slate-200" />
 
-        <div className="w-full max-w-md mx-auto my-5 py-5 shadow-xl rounded-xl bg-blue-500 text-white">
+        <div className="w-full max-w-md mx-auto my-5 py-5 shadow-xl rounded-xl blue-gradient_bg  text-white">
           <table className=" table-auto  w-full">
             <tbody>
               <tr>
-                <td className="px-4 py-2 text-right text-left text-sm">
-                  Phone:
-                </td>
-                <td className="px-4 py-2 font-medium font-mono md:text-xl">+94763560081</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-2 text-right text-left text-sm">
-                  WhatsApp:
-                </td>
-                <td className="px-4 py-2 font-medium font-mono md:text-xl">+94763560081</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-2 text-right text-left text-sm">
-                  Email:
-                </td>
-                <td className="px-4 py-2 font-medium font-mono md:text-xl">
-                  <a className="no-underline" href="chamaalidilka@gmail.com">
-                    chamaalidilka@gmail.com
-                  </a>
+                <td colSpan="3" className="px-4 text-center text-xs md:text-sm">
+                  Phone/WhatsApp
                 </td>
               </tr>
               <tr>
-                <td className="px-4 py-2 text-right text-left text-sm">
-                  LinkedIn:
-                </td>
-                <td className="px-4 py-2 font-medium font-mono md:text-xl">
-                  <a
-                    className="no-underline"
-                    href="https://www.linkedin.com/in/chamaali-dilka/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Chamaali Dilka
-                  </a>
+                <td
+                  colSpan="3"
+                  className="px-4 pb-6 text-center font-semibold font-mono  text-base   md:text-xl  "
+                >
+                  +94763560081
                 </td>
               </tr>
               <tr>
-                <td className="px-4 py-2 text-right text-left text-sm ">
-                  Github:
+                <td colSpan="3" className="px-4 text-center text-xs md:text-sm">
+                  Email
                 </td>
-                <td className="px-4 py-2 font-medium font-mono md:text-xl">
-                  <a
-                    className="no-underline"
-                    href="https://github.com/Chamaali"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Chamaali
-                  </a>
+              </tr>
+              <tr>
+                <td
+                  colSpan="3"
+                  className="px-4 pb-6 text-center font-semibold font-mono  text-base   md:text-xl  "
+                >
+                  chamalidilka@gmail.com
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  colSpan="3"
+                  className=" px-4 py-2 font-medium font-mono md:text-xl text-xs"
+                >
+                  <div className="grid grid-cols-3 place-items-center">
+                    <a
+                      className="no-underline"
+                      href="https://www.linkedin.com/in/chamaali-dilka/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={linkedin} alt="ss" className="w-10 md:w-16 " />
+                    </a>
+                    <a
+                      className="no-underline"
+                      href="https://github.com/Chamaali"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={github} alt="ss" className="w-10 md:w-16 " />
+                    </a>
+
+                    <a
+                      className="no-underline"
+                      href="https://x.com/ChamaliDilka"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={x} alt="ss" className="w-10 md:w-16" />
+                    </a>
+                  </div>
                 </td>
               </tr>
             </tbody>

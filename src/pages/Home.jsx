@@ -67,7 +67,7 @@ const Home = () => {
 
 
 
-      <div className=" top-24 left-6 z-10 fixed">
+      <div className=" lg:top-24 lg:left-6 bottom-6 left-4 z-10 fixed">
         <img
           src={isPlayingMusic ? soundon : soundoff}
           alt="music"
