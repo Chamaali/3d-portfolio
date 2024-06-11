@@ -104,7 +104,7 @@ const Contacts = () => {
     //
 
     <section className="xl:mx-80 md:mx-40 sm:mx-20 mx-10 h-full  text-black">
-      <h1 className="head-text mt-4 text-black font-semibold drop-shadow ">
+      <h1 className="head-text mt-6 text-black font-semibold drop-shadow ">
         <span className="blue-gradient_text font-semibold drop-shadow">
           Contact
         </span>{" "}
