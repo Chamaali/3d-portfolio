@@ -148,7 +148,7 @@ const Contacts = () => {
                   colSpan="3"
                   className="px-4 pb-6 text-center font-semibold font-mono  text-base   md:text-xl  "
                 >
-                  chamalidilka@gmail.com
+                  chamaalidilka@gmail.com
                 </td>
               </tr>
 
