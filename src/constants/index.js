@@ -265,6 +265,7 @@ export const experiences = [
   },
   {
     title: "Production Associate",
+    company_name: "Mozita Digital",
     icon: crypto,
     iconBg: "#fbc3bc",
     date: "2023 - 2024",
