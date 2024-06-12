@@ -44,7 +44,7 @@ const About = () => {
             <div className='py-5 flex flex-col'>
                 <h3 className='subhead-text pt-5 pb-3'>My skills</h3>
 
-                <div className='mt-9 flex flex-wrap justify-evenly gap-20'>
+                <div className='grid grid-cols-5 lg:grid-cols-12  gap-y-10 pt-5'>
                     {skills.map((skill) => (
                         <Tooltip key={skill.imageUrl}
                                  content={skill.name}
@@ -68,7 +68,7 @@ const About = () => {
                     ))}
                 </div>
 
-            </div>
+            </div> 
 
             <hr className='border-slate-200'/>
 

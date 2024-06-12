@@ -25,55 +25,36 @@ import {
   shadcn,
   stack,
   tailwindcss,
-  threejs,
+  
   typescript,
   webpack,
+  laravel,
+  threejs,
+  postman,
+  dart,
+  vb,
+  asp,
+  flutter,
+  springboot,
+  nodejs,
+  expressjs,
+  ballerina,
+  mysql,
+  mongodb,
+  firebase,
+  aws,
+  vercel,
+  figma,
+  xd,
+  github,
+  vscode,
+  ubuntu,
 } from "../assets/icons";
 
 export const skills = [
   {
-    imageUrl: html,
-    name: "HTML",
-    type: "Frontend",
-  },
-  {
-    imageUrl: css,
-    name: "CSS",
-    type: "Frontend",
-  },
-  {
-    imageUrl: javascript,
-    name: "JavaScript",
-    type: "Frontend",
-  },
-  {
-    imageUrl: react,
-    name: "React",
-    type: "Frontend",
-  },
-  {
-    imageUrl: typescript,
-    name: "TypeScript",
-    type: "Frontend",
-  },
-  {
-    imageUrl: redux,
-    name: "Redux",
-    type: "Frontend",
-  },
-  {
-    imageUrl: git,
-    name: "Git",
-    type: "Version Control",
-  },
-  {
-    imageUrl: nextjs,
-    name: "Next.js",
-    type: "Frontend",
-  },
-  {
-    imageUrl: tailwindcss,
-    name: "Tailwind CSS",
+    imageUrl: java,
+    name: "Java",
     type: "Frontend",
   },
   {
@@ -96,14 +77,15 @@ export const skills = [
     name: "C++",
     type: "Frontend",
   },
+
   {
-    imageUrl: docker,
-    name: "Docker",
+    imageUrl: php,
+    name: "PHP",
     type: "Frontend",
   },
   {
-    imageUrl: java,
-    name: "Java",
+    imageUrl: dart,
+    name: "Dart",
     type: "Frontend",
   },
   {
@@ -111,9 +93,25 @@ export const skills = [
     name: "JavaScript",
     type: "Frontend",
   },
+
   {
-    imageUrl: php,
-    name: "PHP",
+    imageUrl: typescript,
+    name: "TypeScript",
+    type: "Frontend",
+  },
+  {
+    imageUrl: html,
+    name: "HTML",
+    type: "Frontend",
+  },
+  {
+    imageUrl: css,
+    name: "CSS",
+    type: "Frontend",
+  },
+  {
+    imageUrl: vb,
+    name: "VB.NET",
     type: "Frontend",
   },
   {
@@ -122,8 +120,136 @@ export const skills = [
     type: "Frontend",
   },
   {
+    imageUrl: flutter,
+    name: "Flutter",
+    type: "Frontend",
+  },
+  {
+    imageUrl: redux,
+    name: "Redux",
+    type: "Frontend",
+  },
+
+  {
+    imageUrl: nextjs,
+    name: "Next.js",
+    type: "Frontend",
+  },
+
+  {
+    imageUrl: laravel,
+    name: "Laravel",
+    type: "Frontend",
+  },
+  {
+    imageUrl: threejs,
+    name: "Three JS",
+    type: "Frontend",
+  },
+
+  {
+    imageUrl: asp,
+    name: "ASP.NET",
+    type: "Frontend",
+  },
+  {
+    imageUrl: springboot,
+    name: "Spring Boot",
+    type: "Frontend",
+  },
+  {
+    imageUrl: nodejs,
+    name: "Node JS",
+    type: "Frontend",
+  },
+  {
+    imageUrl: expressjs,
+    name: "Express JS",
+    type: "Frontend",
+  },
+  {
+    imageUrl: ballerina,
+    name: "Ballerina",
+    type: "Frontend",
+  },
+  {
+    imageUrl: webpack,
+    name: "Webpack",
+    type: "Frontend",
+  },
+  {
+    imageUrl: mysql,
+    name: "MySQL",
+    type: "Frontend",
+  },
+  {
+    imageUrl: mongodb,
+    name: "Mongo DB",
+    type: "Frontend",
+  },
+  {
+    imageUrl: tailwindcss,
+    name: "Tailwind CSS",
+    type: "Frontend",
+  },
+  {
     imageUrl: bootstrap,
     name: "Bootstrap",
+    type: "Frontend",
+  },
+  {
+    imageUrl: firebase,
+    name: "Firebase",
+    type: "Frontend",
+  },
+  {
+    imageUrl: aws,
+    name: "AWS",
+    type: "Frontend",
+  },
+  {
+    imageUrl: vercel,
+    name: "Vercel",
+    type: "Frontend",
+  },
+  {
+    imageUrl: figma,
+    name: "Figma",
+    type: "Frontend",
+  },
+  {
+    imageUrl: xd,
+    name: "XD",
+    type: "Frontend",
+  },
+  {
+    imageUrl: git,
+    name: "Git",
+    type: "Version Control",
+  },
+  {
+    imageUrl: github,
+    name: "GitHub",
+    type: "Frontend",
+  },
+  {
+    imageUrl: vscode,
+    name: "VS Code",
+    type: "Frontend",
+  },
+  {
+    imageUrl: postman,
+    name: "Postman",
+    type: "Frontend",
+  },
+  {
+    imageUrl: ubuntu,
+    name: "Ubuntu",
+    type: "Frontend",
+  },
+  {
+    imageUrl: docker,
+    name: "Docker",
     type: "Frontend",
   },
 ];
@@ -183,20 +309,25 @@ export const experiences = [
 ];
 
 export const publications = [
-    {
-        id:1,
-        title: "Revolutionizing Tea Quality Measurement Using Multi Method Approach: An Innovative Mobile Application Approach",
-        authors: "Dilka H. W. C., Ilangasinghe I. M. S. C., Samaraweera J. D C., Pamoda G. H. M., Wasalthilaka W. V. S. K, and Wickramasooriya P. M. T. A.",
-        year:"2024",
-        keywords: "machine learning, mobile application, multi method approach, tea, tea quality",
-    },
-    {
-        id:2,
-        title: "Design and Development of Unique Playable Farming App for Link Famers and Dwellers",
-        authors: "Edirisinhhe E. A. S. K. S., Samarakon H. M. V .M. B., Dilka H. W. C., Weerakon W. M. K. C.",
-        year:"2024",
-        keywords: "askdfa, aaaa, bbbb, cccc, dddd",
-    },
+  {
+    id: 1,
+    title:
+      "Revolutionizing Tea Quality Measurement Using Multi Method Approach: An Innovative Mobile Application Approach",
+    authors:
+      "Dilka H. W. C., Ilangasinghe I. M. S. C., Samaraweera J. D C., Pamoda G. H. M., Wasalthilaka W. V. S. K, and Wickramasooriya P. M. T. A.",
+    year: "2024",
+    keywords:
+      "machine learning, mobile application, multi method approach, tea, tea quality",
+  },
+  {
+    id: 2,
+    title:
+      "Design and Development of Unique Playable Farming App for Link Famers and Dwellers",
+    authors:
+      "Edirisinhhe E. A. S. K. S., Samarakon H. M. V .M. B., Dilka H. W. C., Weerakon W. M. K. C.",
+    year: "2024",
+    keywords: "askdfa, aaaa, bbbb, cccc, dddd",
+  },
 ];
 
 // export const education = [
