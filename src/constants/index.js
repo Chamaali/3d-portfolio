@@ -49,6 +49,7 @@ import {
   github,
   vscode,
   ubuntu,
+  visualstudio,
 } from "../assets/icons";
 
 export const skills = [
@@ -235,6 +236,11 @@ export const skills = [
   {
     imageUrl: vscode,
     name: "VS Code",
+    type: "Frontend",
+  },
+  {
+    imageUrl: visualstudio,
+    name: "MS Visual Studio",
     type: "Frontend",
   },
   {

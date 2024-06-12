@@ -57,6 +57,7 @@ import vscode from "./vscode.png";
 import postman from "./postman.png";
 import ubuntu from "./ubuntu.png";
 import flutter from "./flutter.png";
+import visualstudio from "./visualstudio.png";
 
 export {
   aws,
@@ -66,7 +67,7 @@ export {
   vb,
   asp,
   springboot,
-  
+  visualstudio,
   nodejs,
   expressjs,
   ballerina,
