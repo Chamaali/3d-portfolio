@@ -406,6 +406,14 @@ export const projects = [
     link: "https://github.com/orgs/Tea-Test/repositories",
   },
   {
+    iconUrl: laravel,
+    theme: "btn-back-white",
+    name: "E Commerce Platform",
+    description:
+      "This is a web application which has developed using Laravel. It was developed both frontend and backend.",
+    link: "https://github.com/Chamaali/E-Commerce-Platform-Fullstack.git",
+  },
+  {
     iconUrl: react,
     theme: "btn-back-white",
     name: "Star Mobile - Web Application",
@@ -426,8 +434,7 @@ export const projects = [
     theme: "btn-back-white",
     name: " IEEE Student Branch of SUSL",
     description:
-      "This app I built from a scratch and set up all features such as: linters, Webpack, Storybook. I've created" +
-      "a basic UI kit, FSD architecture and many more.",
+      "This is a the official website for the IEEE Student Branch of SUSL. This website has been developed by a team of developers. I Contributed to this website.",
     link: "https://ieee.sab.ac.lk/",
   },
   ,
