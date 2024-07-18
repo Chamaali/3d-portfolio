@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import NavigationBar from "./components/NavigationBar.jsx";
-import {About, Contacts, Gallery, Home, Projects  } from "./pages/index.js";
+import {About, Contacts, Publications, Home, Projects  } from "./pages/index.js";
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
                     <Route path={'/about'} element={<About/>}/>
                     <Route path={'/projects'} element={<Projects/>}/>
                     <Route path={'/contacts'} element={<Contacts/>}/>
-                    <Route path={'/gallery'} element={<Gallery />}/>
+                    <Route path={'/publications'} element={<Publications />}/>
                 </Routes>
             </BrowserRouter>
         </main>

@@ -7,7 +7,7 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import sakura from "../assets/sakura.mp3";
 import { research, soundoff, soundon } from "../assets/icons/index.js";
 
-import { skills, experiences } from "../constants";
+import { skills, experiences } from "../constants/index.js";
 import { CTA } from "../components/CTA.jsx";
 import { timeline, Tooltip } from "@material-tailwind/react";
 import { publications } from "../constants/index.js";
@@ -68,7 +68,7 @@ const Gallery = () => {
           <h3 className="subhead-text pl-6">Publications</h3>
         </div>
 
-        <div className="grid md:grid-cols-2  sm:grid-cols-2 xs:grid-cols-1 grid-cols-1  gap-5">
+        <div className="grid md:grid-cols-1  sm:grid-cols-2 xs:grid-cols-1 grid-cols-1  gap-5">
           <div
             className=" rounded-lg shadow-xl px-4 py-2 text-justify border border-slate-200">
             <div className="px-2 pb-3 pt-5 font-serif ">
