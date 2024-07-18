@@ -387,6 +387,8 @@ export const publications = [
 // ];
 
 export const projects = [
+
+
   {
     iconUrl: nextjs,
     theme: "btn-back-white",
@@ -394,6 +396,23 @@ export const projects = [
     description:
       "This is a website for a Ayurvedic clinic. I'm developing both frontend and backend. There is an admin panel to update data by the admin.",
     link: "https://github.com/Chamaali/Lakshmi-Ayurweda",
+  },
+
+  {
+    iconUrl: ballerina,
+    theme: "btn-back-white",
+    name: "Student Registration Backend",
+    description:
+      "This is a sample project to practice Ballerina.",
+    link: "https://github.com/Chamaali/Student-Registration-Backend.git",
+  },
+  {
+    iconUrl: react,
+    theme: "btn-back-white",
+    name: "Student Registration Frontend",
+    description:
+      "This is a sample project to practice Asgardeo and Choreo",
+    link: "https://github.com/Chamaali/Student-Registration-Frontend.git",
   },
   {
     iconUrl: python,

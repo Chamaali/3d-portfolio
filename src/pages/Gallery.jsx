@@ -35,11 +35,11 @@ const Gallery = () => {
       <h1 className="head-text my-6">
         My{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
-          Gallery
+          Publications
         </span>
       </h1>
 
-      <div className="mt-5 flex flex-col gap-3 text-slate-500">
+      {/* <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p className="text-justify text-lg">
           Welcome to the Gallery, a curated space showcasing my collection of
           Research, Achievements, and Memories. Each piece represents
@@ -49,7 +49,7 @@ const Gallery = () => {
           item, and I hope you find them as inspiring and meaningful as they are
           to me.
         </p>
-      </div>
+      </div> */}
 
       <div>
         <div className="flex mt-10   mb-6">
@@ -69,12 +69,30 @@ const Gallery = () => {
         </div>
 
         <div className="grid md:grid-cols-2  sm:grid-cols-2 xs:grid-cols-1 grid-cols-1  gap-5">
-          {publications.map((publication) => (
+          <div
+            className=" rounded-lg shadow-xl px-4 py-2 text-justify border border-slate-200">
+            <div className="px-2 pb-3 pt-5 font-serif ">
+              <p className="pb-2 text-sm">
+                D. Hwc, I. Imsc, S. Jdc, P. Ghm, W. Wvsk, and W. Pmta,
+                “Revolutionizing Tea Quality Measurement using Multi Method
+                Approach: An Innovative Mobile Application Approach.”
+              </p>
+            </div>
+            <div className="px-2 pb-3 pt-5 font-serif ">
+              <p className="pb-2 text-sm">
+                E. Easks., S. Hmvmb, D. Hwc, W. Wmkc, “Design and Development of
+                Unique Playable Farming App for Link Famers and Dwellers”
+              </p>
+            </div>
+          </div>
+          {/* {publications.map((publication) => (
             <div
               className=" rounded-lg shadow-xl px-4 py-2 text-justify border border-slate-200"
               key={publication.id}
             >
               <div className="px-2 pb-3 pt-5 font-serif ">
+
+              
                 <p className="font-bold text-md pb-2">{publication.title}</p>
                 <p className="pb-2 text-sm">{publication.authors}</p>
                 <p className="pb-2 italic font-semibold text-sm">
@@ -82,8 +100,9 @@ const Gallery = () => {
                 </p>
                 <p className="text-sm">{publication.year}</p>
               </div>
+        
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
 

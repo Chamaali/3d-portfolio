@@ -48,12 +48,12 @@ const NavigationBar = () => {
                 About
               </NavLink>
               <NavLink
-                to="./gallery"
+                to="./publications"
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
                 }
               >
-                Gallery
+                Publications
               </NavLink>
               <NavLink
                 to="./projects"
@@ -99,13 +99,13 @@ const NavigationBar = () => {
                 About
               </NavLink>
               <NavLink
-                to="./gallery"
+                to="./publications"
                 onClick={toggleOffcanvas}
                 className={({ isActive }) =>
                   isActive ? "text-blue-500" : "text-black"
                 }
               >
-                Gallery
+                Publications
               </NavLink>
               <NavLink
                 to="./projects"
