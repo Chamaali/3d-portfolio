@@ -415,6 +415,14 @@ export const projects = [
     link: "https://github.com/Chamaali/Student-Registration-Frontend.git",
   },
   {
+    iconUrl: springboot,
+    theme: "btn-back-white",
+    name: "Springboot Backend",
+    description:
+      "This is a sample project to practice Springboot.",
+    link: "https://github.com/Chamaali/Springboot-Learn.git",
+  },
+  {
     iconUrl: python,
     theme: "btn-back-white",
     name: "Sentiment Analysis System",
@@ -422,6 +430,7 @@ export const projects = [
       "This is a machine learning model, which was creted using python. This model is not totally accurate, but it can be used for a basic sentiment analysis.",
     link: "https://github.com/Chamaali/sentiment-analysis-project",
   },
+
   {
     iconUrl: react,
     theme: "btn-back-white",
