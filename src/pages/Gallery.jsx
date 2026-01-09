@@ -13,6 +13,7 @@ import img9 from '../assets/gallery/9.jpg';
 import img10 from '../assets/gallery/10.jpg';
 import img11 from '../assets/gallery/11.jpg';
 import img12 from '../assets/gallery/12.jpg';
+import img13 from '../assets/gallery/13.jpg';
 
 // Gallery data with local images
 const galleryImages = [
@@ -99,6 +100,13 @@ const galleryImages = [
     title: "Image 12",
     category: ["coding"],
     description: "Gallery image 12"
+  },
+  {
+    id: 13,
+    src: img13,
+    title: "Image 13",
+    category: ["coding", "research"],
+    description: "Gallery image 13"
   },
 ];
 
