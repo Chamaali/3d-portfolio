@@ -58,6 +58,7 @@ import postman from "./postman.png";
 import ubuntu from "./ubuntu.png";
 import flutter from "./flutter.png";
 import visualstudio from "./visualstudio.png";
+import instagram from "./instagram.png";
 
 export {
   aws,
@@ -65,6 +66,7 @@ export {
   laravel,
   dart,
   vb,
+  instagram,
   asp,
   springboot,
   visualstudio,

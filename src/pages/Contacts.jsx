@@ -8,7 +8,7 @@ import Loader from "../components/Loader.jsx";
 import useAlert from "../hooks/useAlert.js";
 import Alert from "../components/Alert.jsx";
 import Bird from "../models/Bird.jsx";
-import { github, gmail, linkedin, x } from "../assets/icons/index.js";
+import { github, gmail, linkedin, x, instagram } from "../assets/icons/index.js";
 
 import sakura from "../assets/sakura.mp3";
 import { soundoff, soundon } from "../assets/icons/index.js";
@@ -60,7 +60,7 @@ const Contacts = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: data.name,
-          to_name: "Ivan",
+          to_name: "Chamaali",
           from_email: data.email,
           message: data.message,
         },
@@ -101,144 +101,181 @@ const Contacts = () => {
     };
   }, [isPlayingMusic]);
   return (
-    //
+    <section className="max-container">
+      {alert.show && <Alert {...alert} />}
 
-    <section className="xl:mx-80 md:mx-40 sm:mx-20 mx-10 h-full  text-black">
-      <h1 className="head-text mt-6 text-black font-semibold drop-shadow ">
+      <h1 className="head-text">
+        Get in{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
-          Contact
-        </span>{" "}
-        me
+          Touch
+        </span>
       </h1>
 
-      <div className="mt-5 flex flex-col gap-3 ">
-        <p className="text-justify text-slate-500 pb-5">
-          Thank you for visiting my website! I am a passionate software engineer
-          specializing in building robust, scalable applications. Whether you
-          have a project idea, a collaboration opportunity, or just want to
-          connect, I'd love to hear from you. Please feel free to reach out to
-          me through any of the following methods.
-        </p>
+      <p className="text-slate-500 mt-4 leading-relaxed">
+        Thank you for visiting my website! I am a passionate software engineer
+        specializing in building robust, scalable applications. Whether you
+        have a project idea, a collaboration opportunity, or just want to
+        connect, I'd love to hear from you.
+      </p>
 
-        <hr className="border-slate-200" />
+      <div className="flex flex-col lg:flex-row gap-10 mt-12">
+        {/* Contact Info Cards */}
+        <div className="flex-1 flex flex-col gap-6">
+          {/* Phone Card */}
+          <div className="glassmorphism p-6 rounded-2xl hover:shadow-lg transition-shadow">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00c6ff] to-[#0072ff] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-slate-400 text-sm">Phone / WhatsApp</p>
+                <a href="tel:+94763560081" className="text-black-500 font-semibold text-lg hover:text-blue-500 transition-colors">
+                  +94 76 356 0081
+                </a>
+              </div>
+            </div>
+          </div>
 
-        <div className="w-full max-w-md mx-auto my-5 py-5 shadow-xl rounded-xl blue-gradient_bg  text-white">
-          <table className=" table-auto  w-full">
-            <tbody>
-              <tr>
-                <td colSpan="3" className="px-4 text-center text-xs md:text-sm">
-                  Phone/WhatsApp
-                </td>
-              </tr>
-              <tr>
-                <td
-                  colSpan="3"
-                  className="px-4 pb-6 text-center font-semibold font-mono  text-base   md:text-xl  "
-                >
-                  +94763560081
-                </td>
-              </tr>
-              <tr>
-                <td colSpan="3" className="px-4 text-center text-xs md:text-sm">
-                  Email
-                </td>
-              </tr>
-              <tr>
-                <td
-                  colSpan="3"
-                  className="px-4 pb-6 text-center font-semibold font-mono  text-base   md:text-xl  "
-                >
+          {/* Email Card */}
+          <div className="glassmorphism p-6 rounded-2xl hover:shadow-lg transition-shadow">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#00c6ff] to-[#0072ff] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-slate-400 text-sm">Email</p>
+                <a href="mailto:chamaalidilka@gmail.com" className="text-black-500 font-semibold text-lg hover:text-blue-500 transition-colors break-all">
                   chamaalidilka@gmail.com
-                </td>
-              </tr>
+                </a>
+              </div>
+            </div>
+          </div>
 
-              <tr>
-                <td
-                  colSpan="3"
-                  className=" px-4 py-2 font-medium font-mono md:text-xl text-xs"
-                >
-                  <div className="grid grid-cols-3 place-items-center">
-                    <a
-                      className="no-underline"
-                      href="https://www.linkedin.com/in/chamaali-dilka/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={linkedin} alt="ss" className="w-10 md:w-16 " />
-                    </a>
-                    <a
-                      className="no-underline"
-                      href="https://github.com/Chamaali"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={github} alt="ss" className="w-10 md:w-16 " />
-                    </a>
+          {/* Social Links */}
+          <div className="glassmorphism p-6 rounded-2xl">
+            <p className="text-slate-400 text-sm mb-4">Connect with me</p>
+            <div className="flex gap-4">
+              <a
+                href="https://www.linkedin.com/in/chamaali-dilka/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all"
+              >
+                <img src={linkedin} alt="LinkedIn" className="w-7 h-7" />
+              </a>
+              <a
+                href="https://github.com/Chamaali"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all"
+              >
+                <img src={github} alt="GitHub" className="w-7 h-7" />
+              </a>
+              <a
+                href="https://www.instagram.com/chamaa_dil/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all"
+              >
+                <img src={instagram} alt="Instagram" className="w-7 h-7" />
+              </a>
+            </div>
+          </div>
+        </div>
 
-                    <a
-                      className="no-underline"
-                      href="https://x.com/ChamaliDilka"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src={x} alt="ss" className="w-10 md:w-16" />
-                    </a>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        {/* Contact Form */}
+        <div className="flex-1">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="w-full flex flex-col gap-6 neo-brutalism-white p-8 rounded-2xl"
+          >
+            <div>
+              <label className="text-black-500 font-semibold">
+                Name
+              </label>
+              <input
+                type="text"
+                {...register("name", { required: "Name is required" })}
+                className="input"
+                placeholder="John Doe"
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+              )}
+            </div>
+
+            <div>
+              <label className="text-black-500 font-semibold">
+                Email
+              </label>
+              <input
+                type="email"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^\S+@\S+$/i,
+                    message: "Invalid email address",
+                  },
+                })}
+                className="input"
+                placeholder="john@example.com"
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+              )}
+            </div>
+
+            <div>
+              <label className="text-black-500 font-semibold">
+                Message
+              </label>
+              <textarea
+                rows={5}
+                {...register("message", {
+                  required: "Message is required",
+                  minLength: {
+                    value: 10,
+                    message: "Message must be at least 10 characters",
+                  },
+                })}
+                className="textarea"
+                placeholder="How can I help you?"
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              {errors.message && (
+                <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="btn"
+            >
+              {isLoading ? (
+                <span className="flex items-center justify-center gap-2">
+                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                  </svg>
+                  Sending...
+                </span>
+              ) : (
+                "Send Message"
+              )}
+            </button>
+          </form>
         </div>
       </div>
-      {/* <div className="grid  place-items-end ">
-           <div className="lg:w-1/2 lg:h-auto md:h-[550px] ">
-            <Canvas
-              camera={{
-                position: [0, 0, 5],
-                fov: 75,
-                near: 0.1,
-                far: 1000,
-              }}
-            >
-              <directionalLight position={[0, 0, 1]} intensity={2.5} />
-              <ambientLight intensity={0.5} />
-
-              <spotLight
-                position={[10, 10, 10]}
-                angle={0.15}
-                penumbra={1}
-                intensity={2}
-              />
-
-              <Suspense fallback={<Loader />}>
-                <Fox
-                  currentAnimation={currentAnimation}
-                  position={screenPosition}
-                  rotation={rotation}
-                  scale={screenScale}
-                />
-                <Bird/>
-              </Suspense>
-            </Canvas>
-          </div>
-           <hr className='border-slate-200'/> 
-        </div>  
-
-
-        <hr className='border-slate-200'/>
-
-        <CTA/>
-      </div>
-
-      <hr className='border-slate-200'/>
-
-      <div className='absolute bottom left-2'>
-                <img src={isPlayingMusic ? soundon : soundoff}
-                     alt="music"
-                     className='w-7 h-7 cursor-pointer object-contain'
-                     onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-                />
-            </div> */}
     </section>
   );
 };

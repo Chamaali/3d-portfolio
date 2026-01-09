@@ -261,6 +261,14 @@ export const skills = [
 ];
 
 export const experiences = [
+    {
+    title: "Software Engineer",
+    company_name: "Lakshmi Ayurveda Medical Center",
+    icon: crypto,
+    iconBg: "#fbc3bc",
+    date: "2023 - Present",
+    points: ["Health and Wellness Company", "Hikkaduwa, Sri Lanka"],
+  },
   {
     title: "Associate Production",
     company_name: "Innodata Lanka PVT (LTD)",
@@ -270,18 +278,10 @@ export const experiences = [
     points: ["Information Technology Company", "Galle, Sri Lanka"],
   },
   {
-    title: "Production Associate",
-    company_name: "Mozita Digital",
-    icon: crypto,
-    iconBg: "#fbc3bc",
-    date: "2023 - 2024",
-    points: ["Software Company", "Christchurch, New Zealand"],
-  },
-  {
     title: "BSc(Hons) in Computing and Information Systems",
     icon: computeradv,
     iconBg: "#accbe1",
-    date: "2020 - 2025",
+    date: "2020 - Present",
     points: ["Sabaragamuwa University of Sri Lanka", "Belihuloya, Sri Lanka"],
   },
   {
@@ -299,13 +299,13 @@ export const experiences = [
     date: "2008 - 2010",
     points: ["E Base Lanka International", "Yakkalamulla, Sri Lanka"],
   },
-  {
-    title: "Professional Certificate in Marketing",
-    icon: computeradv,
-    iconBg: "#accbe1",
-    date: "2023 - 2024",
-    points: ["Sri Lanka Institute of Marketing (SLIM)", "Matara, Sri Lanka"],
-  },
+//   {
+//     title: "Professional Certificate in Marketing",
+//     icon: computeradv,
+//     iconBg: "#accbe1",
+//     date: "2023 - 2024",
+//     points: ["Sri Lanka Institute of Marketing (SLIM)", "Matara, Sri Lanka"],
+//   },
   {
     title: "High School Education",
     icon: computeradv,
@@ -389,94 +389,94 @@ export const publications = [
 export const projects = [
 
 
-  {
-    iconUrl: nextjs,
-    theme: "btn-back-white",
-    name: "Lakshmi Ayurweda",
-    description:
-      "This is a website for a Ayurvedic clinic. I'm developing both frontend and backend. There is an admin panel to update data by the admin.",
-    link: "https://github.com/Chamaali/Lakshmi-Ayurweda",
-  },
+//   {
+//     iconUrl: nextjs,
+//     theme: "btn-back-white",
+//     name: "Lakshmi Ayurweda",
+//     description:
+//       "This is a website for a Ayurvedic clinic. I'm developing both frontend and backend. There is an admin panel to update data by the admin.",
+//     link: "https://github.com/Chamaali/Lakshmi-Ayurweda",
+//   },
 
-  {
-    iconUrl: ballerina,
-    theme: "btn-back-white",
-    name: "Student Registration Backend",
-    description:
-      "This is a sample project to practice Ballerina.",
-    link: "https://github.com/Chamaali/Student-Registration-Backend.git",
-  },
-  {
-    iconUrl: react,
-    theme: "btn-back-white",
-    name: "Student Registration Frontend",
-    description:
-      "This is a sample project to practice Asgardeo and Choreo",
-    link: "https://github.com/Chamaali/Student-Registration-Frontend.git",
-  },
-  {
-    iconUrl: springboot,
-    theme: "btn-back-white",
-    name: "Springboot Backend",
-    description:
-      "This is a sample project to practice Springboot.",
-    link: "https://github.com/Chamaali/Springboot-Learn.git",
-  },
-  {
-    iconUrl: python,
-    theme: "btn-back-white",
-    name: "Sentiment Analysis System",
-    description:
-      "This is a machine learning model, which was creted using python. This model is not totally accurate, but it can be used for a basic sentiment analysis.",
-    link: "https://github.com/Chamaali/sentiment-analysis-project",
-  },
+//   {
+//     iconUrl: ballerina,
+//     theme: "btn-back-white",
+//     name: "Student Registration Backend",
+//     description:
+//       "This is a sample project to practice Ballerina.",
+//     link: "https://github.com/Chamaali/Student-Registration-Backend.git",
+//   },
+//   {
+//     iconUrl: react,
+//     theme: "btn-back-white",
+//     name: "Student Registration Frontend",
+//     description:
+//       "This is a sample project to practice Asgardeo and Choreo",
+//     link: "https://github.com/Chamaali/Student-Registration-Frontend.git",
+//   },
+//   {
+//     iconUrl: springboot,
+//     theme: "btn-back-white",
+//     name: "Springboot Backend",
+//     description:
+//       "This is a sample project to practice Springboot.",
+//     link: "https://github.com/Chamaali/Springboot-Learn.git",
+//   },
+//   {
+//     iconUrl: python,
+//     theme: "btn-back-white",
+//     name: "Sentiment Analysis System",
+//     description:
+//       "This is a machine learning model, which was creted using python. This model is not totally accurate, but it can be used for a basic sentiment analysis.",
+//     link: "https://github.com/Chamaali/sentiment-analysis-project",
+//   },
 
-  {
-    iconUrl: react,
-    theme: "btn-back-white",
-    name: "Tea Test - Mobile Application",
-    description:
-      "This is a mobile application for Tea Test. It was developed both frontend and backend. There is a machine learning model for identify Tea Grades.",
-    link: "https://github.com/orgs/Tea-Test/repositories",
-  },
-  {
-    iconUrl: laravel,
-    theme: "btn-back-white",
-    name: "E Commerce Platform",
-    description:
-      "This is a web application which has developed using Laravel. It was developed both frontend and backend.",
-    link: "https://github.com/Chamaali/E-Commerce-Platform-Fullstack.git",
-  },
-  {
-    iconUrl: react,
-    theme: "btn-back-white",
-    name: "Star Mobile - Web Application",
-    description:
-      "This is a web application for phone shop. This application is being developed by a team of developers",
-    link: "https://github.com/Chamaali/Star_Mobile",
-  },
-  {
-    iconUrl: react,
-    theme: "btn-back-white",
-    name: "Duelo Web Site",
-    description: "This is official website for Duelo Robotic Competition.",
-    link: "https://duelo.lk/",
-  },
-  ,
-  {
-    iconUrl: react,
-    theme: "btn-back-white",
-    name: " IEEE Student Branch of SUSL",
-    description:
-      "This is a the official website for the IEEE Student Branch of SUSL. This website has been developed by a team of developers. I Contributed to this website.",
-    link: "https://ieee.sab.ac.lk/",
-  },
-  ,
-  {
-    iconUrl: react,
-    theme: "btn-back-white",
-    name: "Speedy Loan - Web Application",
-    description: "This web application for request and approve loan online.",
-    link: "https://github.com/Chamaali/Speedy-Loan",
-  },
+//   {
+//     iconUrl: react,
+//     theme: "btn-back-white",
+//     name: "Tea Test - Mobile Application",
+//     description:
+//       "This is a mobile application for Tea Test. It was developed both frontend and backend. There is a machine learning model for identify Tea Grades.",
+//     link: "https://github.com/orgs/Tea-Test/repositories",
+//   },
+//   {
+//     iconUrl: laravel,
+//     theme: "btn-back-white",
+//     name: "E Commerce Platform",
+//     description:
+//       "This is a web application which has developed using Laravel. It was developed both frontend and backend.",
+//     link: "https://github.com/Chamaali/E-Commerce-Platform-Fullstack.git",
+//   },
+//   {
+//     iconUrl: react,
+//     theme: "btn-back-white",
+//     name: "Star Mobile - Web Application",
+//     description:
+//       "This is a web application for phone shop. This application is being developed by a team of developers",
+//     link: "https://github.com/Chamaali/Star_Mobile",
+//   },
+//   {
+//     iconUrl: react,
+//     theme: "btn-back-white",
+//     name: "Duelo Web Site",
+//     description: "This is official website for Duelo Robotic Competition.",
+//     link: "https://duelo.lk/",
+//   },
+//   ,
+//   {
+//     iconUrl: react,
+//     theme: "btn-back-white",
+//     name: " IEEE Student Branch of SUSL",
+//     description:
+//       "This is a the official website for the IEEE Student Branch of SUSL. This website has been developed by a team of developers. I Contributed to this website.",
+//     link: "https://ieee.sab.ac.lk/",
+//   },
+//   ,
+//   {
+//     iconUrl: react,
+//     theme: "btn-back-white",
+//     name: "Speedy Loan - Web Application",
+//     description: "This web application for request and approve loan online.",
+//     link: "https://github.com/Chamaali/Speedy-Loan",
+//   },
 ];

@@ -80,8 +80,13 @@ const Gallery = () => {
             </div>
             <div className="px-2 pb-3 pt-5 font-serif ">
               <p className="pb-2 text-sm">
-                E. Easks., S. Hmvmb, D. Hwc, W. Wmkc, “Design and Development of
+                E. Easks, S. Hmvmb, D. Hwc, W. Wmkc, “Design and Development of
                 Unique Playable Farming App for Link Famers and Dwellers”
+              </p>
+            </div>
+            <div className="px-2 pb-3 pt-5 font-serif ">
+              <p className="pb-2 text-sm">
+                D. Hwc, T. Am, W. Wvsk, “Analyzing the Impact of Environmental Factors on the Color of Tea and its Impact on Human Health: Optimizing Tea Quality”
               </p>
             </div>
           </div>
