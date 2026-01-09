@@ -117,9 +117,9 @@ function Gallery() {
       );
 
   return (
-    <section className="max-container">
+    <section className="xl:mx-80 md:mx-40 sm:mx-20 mx-10 h-full">
       {/* Header */}
-      <h1 className="head-text">
+      <h1 className="text-3xl font-bold my-6">
         My{" "}
         <span className="blue-gradient_text font-semibold drop-shadow">
           Gallery
